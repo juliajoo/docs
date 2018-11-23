@@ -1,4 +1,4 @@
-# dcd-book
+# The Data-Centric Design Book
 
 ## Test
 
