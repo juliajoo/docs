@@ -1,6 +1,6 @@
-# Workshop 1: Building an Internet-connected Wheelchair
+# Tutorial 1: Building an Internet-connected Wheelchair
 
-In this workshop we lead you step-by-step toward setting up the main components
+In this tutorial we lead you step-by-step toward setting up the main components
 of the Internet-Connected Wheelchair by getting the code, registering on the cloud
 platform, running a Python code and running an Arduino code.
 
@@ -10,97 +10,6 @@ platform, running a Python code and running an Arduino code.
 4. [Data Collection with Arduino](#4-data-collection-with-arduino)
 5. [Setting up the Raspberry Pi](#5-setting-up-the-raspberry-pi)
 
-
-# 1 Git Flow
-
-### 1.1 Fork Wheelchair Design Platform repository (only one member of the group)
-
-*'A fork is a copy of a repository. Forking a repository allows you to freely
-experiment with changes without affecting the original project.'*
-<a href="https://help.github.com/articles/fork-a-repo/" target="_blank">(GitHub Help)</a>
-
-Go to the GitHub repository of the Wheelchair Design Platform:
-<a href="https://github.com/datacentricdesign/wheelchair-design-platform" target="_blank">https://github.com/datacentricdesign/wheelchair-design-platform</a>
-
-On the top-right corner of this GitHub page, click on Fork.
-
-![Flowchart Push Button](images/fork.png)
-
-In the dialog, select your account (where you create the copy of the repository).
-
-![Flowchart Push Button](images/select_fork_dest.png)
-
-You now have a copy of the wheelchair-design-platform repository on your own account.
-
-### 1.2 Add members to repo (only one member of the group)
-
-Your repository is publicly accessible for reading. However, you need to give
-the other members of the group access to this repository. On the top menu, click
-*'Settings' > 'Collaborators'*. Search the username of your group members and add them.
-
-![Flowchart Push Button](images/add_collaborator.png)
-
-### 1.3 Create a project (only one member of the group)
-
-GitHub offers a convenient way of managing your projects with a Kanban (scheduling system) style
-board. On the top menu, click on 'Projects' and click on the green button 'New
-Project'. Fill in a project name, select the template 'Basic Kanban' and click
-'Create project'. You can use this space to map your tasks and your progress.
-
-![Flowchart Push Button](images/create_project.png)
-
-### 1.4 Clone repository (all group members)
-
-*'When you create a repository on GitHub, it exists as a remote repository. You
-can clone your repository to create a local copy on your computer and sync
-between the two locations.'*
-<a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">(GitHub Help)</a>
-
-On GitHub, at the top of your forked repository, click on the green button 'Clone or
-download' and copy the provided link.
-
-![Flowchart Push Button](images/link_clone.png)
-
-Go back to the Atom terminal, and type 'git clone' followed by the link you copied.
-For example:
-
-```bash
-git clone https://github.com/example/wheelchair-design-platform.git
-```
-
-![Flowchart Push Button](images/clone.png)
-
-Let's tell Git who we are, by typing the following commands (enter these commands one after the other):
-
-```bash
-git config --global user.email "YOUR EMAIL ADDRESS"
-git config --global user.name "YOUR NAME"
-```
-
-
-## 1.5 Project in Atom
-
-To open the project you cloned, click on 'File' > 'Open Folder' on the top menu and
-select the folder you cloned. On the left panel, you can see the files of your
-project.
-
-
-![Flowchart Push Button](images/atom_files.png)
-
-Let's have a closer look:
-
-* The .git folder contains the full history of your project, managed by git. Do not
-edit or delete files in this folder;
-* The docs folder contains documentation and workshops;
-* examples contains all code examples to get started;
-* .gitignore contains the list of files/file extensions you do not want to track
-with Git. It is especially convenient for local configuration or passwords not
-to be shared;
-* LICENSE contains the MIT license for this project;
-* README.md contains a short introduction to the platform in Markdown. Markdown
-is a lightweight markup language, i.e. minimal set tags to format text;
-* requirements.txt contains the list of the python libraries you need to install for
-the project to work;
 
 ## 1.6 Sign up on the Data-Centric Design Hub
 
@@ -505,7 +414,7 @@ your Raspberry Pi and its files. Disable this feature
 
 ### 5.3 Booting and Connecting
 
-__**DISCLAIMER:**__ If you do this workshop as part of a class, keep in mind that
+__**DISCLAIMER:**__ If you do this tutorial as part of a class, keep in mind that
 all Raspberry Pi will have the same name on the network. You will have to power
 your Raspberry Pi one after the other to be able to identify them.
 

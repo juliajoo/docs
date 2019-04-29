@@ -1,4 +1,4 @@
-# Workshop 4: Developing and Conducting a Data Collection Campaign
+# Tutorial 4: Developing and Conducting a Data Collection Campaign
 
 * Defining the purpose
 

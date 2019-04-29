@@ -15,19 +15,72 @@ Here are four short videos with more details:
 * <a href="https://git-scm.com/video/get-going" target="_blank">Get Going</a>
 * <a href="https://git-scm.com/video/quick-wins" target="_blank">Quick wins</a>
 
-GitHub is a popular online platform that hosts remote Git repositories.
-We will use it throughout the course to host your repo.
-
 In this page:
 
+* [Setup](#setup)
+* [Repository](#repository)
 * [Git Flow](#git-flow)
 * [Pull Requests](#pull-requests)
 * [Issue Tracking and Flagging](#issue-tracking-and-flagging)
+
+## Setup
+
+### Install Git
+
+Download and install Git from <a href="https://git-scm.com/download" target="_blank">here</a>.
+
+### Sign up on GitHub
+
+GitHub is a popular online platform that hosts remote Git repositories.
+
+If you do not have GitHub account, sign up
+<a href="https://github.com/" target="_blank">here</a>.
+
+## Repository
+
+### 1 Create Repository
+
+### 2 Clone repository
+
+*'When you create a repository on GitHub, it exists as a remote repository. You
+can clone your repository to create a local copy on your computer and sync
+between the two locations.'*
+<a href="https://help.github.com/articles/cloning-a-repository/" target="_blank">(GitHub Help)</a>
+
+On GitHub, at the top of your forked repository, click on the green button 'Clone or
+download' and copy the provided link.
+
+![Flowchart Push Button](images/link_clone.png)
+
+Go back to the Atom terminal, and type 'git clone' followed by the link you copied.
+For example:
+
+```bash
+git clone https://github.com/example/wheelchair-design-platform.git
+```
+
+![Flowchart Push Button](images/clone.png)
+
+Let's tell Git who we are, by typing the following commands (enter these commands one after the other):
+
+```bash
+git config --global user.email "YOUR EMAIL ADDRESS"
+git config --global user.name "YOUR NAME"
+```
+
+
+### 3 Open Project in Atom
+
+To open the project you cloned, click on 'File' > 'Open Folder' on the top menu and
+select the folder you cloned. On the left panel, you can see the files of your
+project.
+
 
 ## Git Flow
 
 To experience the flow of Git, of updating and sharing progress, let's update the
  project documentation.
+
 
 ### Step 1: Edit (a) File(s)
 

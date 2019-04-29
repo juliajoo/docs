@@ -141,37 +141,6 @@ If you do not have experience with Python, we recommend you to go through the fo
 to get started: <a href="http://www.learnpython.org/" target="_blank">http://www.learnpython.org/</a>
 
 
-## 3 Git & GitHub
-
-Git is a version control system (VCS). It helps to keep track of all the  changes
-in your project and sharing these. While it is heavily used by software developers to
-track and share code, it is also useful to track and share the progress of any
-design or research process. The principle is as follows: you share a remote
-repository, you 'pull' the latest changes (any files, code, doc...) from your
-peers from this repository, you make changes on your machine, and you 'push' your
-changes on the remote repository, making them available to your peers.
-
-Here are four short videos with more details:
-
-* <a href="https://git-scm.com/video/what-is-version-control" target="_blank">What is version control</a>
-* <a href="https://git-scm.com/video/what-is-git" target="_blank">What is git</a>
-* <a href="https://git-scm.com/video/get-going" target="_blank">Get Going</a>
-* <a href="https://git-scm.com/video/quick-wins" target="_blank">Quick wins</a>
-
-
-### 3.1 Install Git
-
-Download and install Git from <a href="https://git-scm.com/download" target="_blank">here</a>.
-
-GitHub is a popular online platform that hosts remote Git repositories.
-We will use it throughout the course to host your repo.
-
-### 3.2 Sign up on GitHub
-
-If you do not have GitHub account, sign up
-<a href="https://github.com/" target="_blank">here</a>.
-
-
 ## 4 Install Arduino IDE
 
 Similar to Atom, the Arduino IDE is an editor with a convenient set of tools to program

@@ -1,6 +1,6 @@
-# Workshop 2: Integrating and Visualising Sensor-Based Data
+# Tutorial 2: Integrating and Visualising Sensor-Based Data
 
-In this workshop we lead you setp-by-step to experience the capabilities of an 
+In this tutorial we lead you setp-by-step to experience the capabilities of an 
 orientation sensor and set it up on a wheel as a Bluetooth service.
 
 1. [Orientation Sensor](#1-orientation-sensors)
@@ -11,7 +11,7 @@ orientation sensor and set it up on a wheel as a Bluetooth service.
 
 ## 1 Orientation Sensors
 
-To get started with this second workshop, we propose to experience the principles
+To get started with this second tutorial, we propose to experience the principles
  and the capabilities of an orientation sensors. Go through the explanation and
  the examples we compiled for the BNO055: [Orientation Sensor](../resources/sensors/orientation.md)
 
@@ -27,7 +27,7 @@ At this stage, there are three potential strategy:
 e.g. Bluetooth, Zwave, Zigbee.
 3. Sending data to the Raspberry via WiFi or Bluetooth (Wireless capabilities of the Pi).
 
-In this workshop we choose the third option, sending data to the Raspberry Pi via
+In this tutorial we choose the third option, sending data to the Raspberry Pi via
 Bluetooth. This strategy avoid implementing Bluetooth on the Arduino Mega, leveraging
 the Raspberry Pi capabilities. We  also centralise the data before sending them
 to the cloud, offering more flexibility.

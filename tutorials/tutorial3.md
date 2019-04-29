@@ -1,6 +1,6 @@
-# Workshop 3: Actuators
+# Tutorial 3: Actuators
 
-In this workshop we lead you step-by-step to implement three actuators (vibration
+In this tutorial we lead you step-by-step to implement three actuators (vibration
 motors, LEDs and speakers) from data, through Bluetooth and from the cloud.
 
 1. [Rotation to Vibration](#1-nudging-for-recommended-limit)
@@ -8,7 +8,7 @@ motors, LEDs and speakers) from data, through Bluetooth and from the cloud.
 
 ## 1 Nudging for Recommended Limit
 
-At the end of workshop 2, we were able to register to a BLE GATT service on the
+At the end of tutorial 2, we were able to register to a BLE GATT service on the
 Feather 32u4 placed on the left wheel of the wheelchair to receive orientation
 and rotation data. In this step, we explore how we can use this information to
 reason on the Raspberry Pi, and trigger action on the Arduino Mega.
@@ -128,7 +128,7 @@ while True:
 The final step is to control the vibration based on data. In this example, we will
 nudge the wheelchair users when they reach their recommended number of wheel rotations.
 
-To do this, we can start from the last example of workshop 2, which subscribes to
+To do this, we can start from the last example of tutorial 2, which subscribes to
 orientation and rotation GATT services from the wheel and sends the data to the DCD Hub.
 We remove the subscription to orientation, which is not necessary in this case. We modify
 the handler of rotation data so that we check whether we need to nudge the wheelchair user or not.
