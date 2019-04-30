@@ -1,4 +1,10 @@
-# Documenting your Prototype
+---
+layout: post
+title:  "Documenting your Prototype"
+date:   2019-04-30 01:30:13 +0000
+categories: Tools
+tags: Documentation Development Prototype
+---
 
 A key element of your prototype is its documentation: what is it? What can it do
 and how? The documentation will get people to understand your design, contribute

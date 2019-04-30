@@ -1,4 +1,11 @@
-# Adafruit Feathers
+---
+layout: post
+title:  "Adafruit Feathers"
+date:   2019-04-30 01:30:13 +0000
+categories: Platform
+tags: Hardware Feather Bluetooth
+---
+ 
 The Adafruit Feather is a complete line of development boards that are both 
 standalone and stackable.
 

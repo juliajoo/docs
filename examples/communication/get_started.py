@@ -64,6 +64,6 @@ def generate_dum_property_values(the_property):
     # Then call the same function again to generate new values
     generate_dum_property_values(the_property)
 
-
 # Finally, we call our function to start generating dum values
-generate_dum_property_values(my_property)
+while True:
+    generate_dum_property_values(my_property)

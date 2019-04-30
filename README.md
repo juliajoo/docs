@@ -13,12 +13,12 @@
 * This platform uses two programming languages, Python on computers and C on
 micro-controllers. While descriptions and examples of code should help you
 get started, you can find some additional resources
-[here](resources/software.md).
+[here](_posts/software.md).
 
 * Documentation of your project is key,
-[here are some tips and examples](resources/documentation.md).
+[here are some tips and examples](_posts/documentation.md).
 
-* [Git manipulation such as Pull Requests](resources/git.md).
+* [Git manipulation such as Pull Requests](_posts/git.md).
 
 
 
