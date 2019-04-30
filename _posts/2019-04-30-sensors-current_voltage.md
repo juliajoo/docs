@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Current / Voltage"
+date:   2019-04-30 01:30:13 +0000
+categories: Sensors
+tags: Current Voltage
+---
+
+Some info about current / voltage sensors
+
 # Current & Voltage Sensors
 
 These are Integrated sensors that detect both the current, and the voltage (then, following Ohm's law, the power) of a circuit.
@@ -12,7 +22,7 @@ High-side and low-side current sensing refers to the placement of the current-se
 * High Side - between the positive supply and the load (whatever is being driven by the circuit);
 * Low Side - between the load and ground.
 
-![](images/current_voltage_1.png)
+![](/docs/assets/res/current_voltage_1.png)
 
 ### Pins
 1. Ground;
@@ -46,9 +56,9 @@ We'll be making use of all the basic functionalities of this breakout to do some
 
 ##### Schematic
 
-![](images/current_voltage_2.png)
+![](/docs/assets/res/current_voltage_2.png)
 
 ##### Results
 Now, let's see what our console should look like:
 
-![](images/current_voltage_1.gif)
+![](/docs/assets/res/current_voltage_1.gif)

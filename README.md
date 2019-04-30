@@ -3,10 +3,10 @@
 ## Tutorials
 
 * [Getting started](tutorials/GettingStarted.md)
-* [tutorial 1: Building an Internet-Connected Wheelchair](tutorials/tutorial1.md)
-* [tutorial 2: Integrating and Visualising Sensor-Based Data](tutorials/tutorial2.md)
-* [tutorial 3: Developing Algorithms and Controlling Actuators](tutorials/tutorial3.md)
-* [tutorial 4: Developing and Conducting a Data Collection Campaign](tutorials/tutorial4.md)
+* [tutorial 1: Building an Internet-Connected Wheelchair](_posts/tutorial1.md)
+* [tutorial 2: Integrating and Visualising Sensor-Based Data](_posts/tutorial2.md)
+* [tutorial 3: Developing Algorithms and Controlling Actuators](_posts/tutorial3.md)
+* [tutorial 4: Developing and Conducting a Data Collection Campaign](_posts/tutorial4.md)
 
 ## Resources
 

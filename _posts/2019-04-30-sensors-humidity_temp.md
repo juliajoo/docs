@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Humidity and Temperature Sensors"
+date:   2019-04-30 01:30:13 +0000
+categories: Sensors
+tags: Humidity Temp
+---
+
+Some info about humidity and temp
+
 # DHT22 (Humidity and temperature sensor)
 
 This basic, low cost digital sensor is simple to use, outputting digital signal data on the data pin, however, you can only get new data from it every 2 seconds. It requires no analog inputs.
@@ -8,7 +18,7 @@ If you are connecting several, each must have its own data pin.
 ##Technical Details
 Please use a 4.7 - 10 kΩ medium strength pullup resistor between pins 1 and 2.  
 
-![](1.png)
+![](/docs/assets/res/humidity_temp_1.png)
 
 * **Pins**
   1. Vcc, connect to 5V;
@@ -33,9 +43,9 @@ To use this sensor with the Arduino, please install the following libraries;
 #### Schematic
 Here's how our example circuit is going to look like:
 
-![](2.png)
+![](/docs/assets/res/humidity_temp_2.png)
 
 #### Results
 Lets see how the console will look with the finished example:
 
-![](1.gif)
+![](/docs/assets/res/humidity_temp_1.gif)

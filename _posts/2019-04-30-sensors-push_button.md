@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Push buttons"
+date:   2019-04-30 01:30:13 +0000
+categories: Sensors Actuators
+tags: Push Button
+---
+
+Some info about push button
+
 # Pushbutton Switch
 
 A pushbutton switch, is a very simple electronic device with 4 pins. When left
@@ -9,4 +19,4 @@ Here's a brief schematic (note, a set of pins means those pins are always connec
 you can see the sets in black, and the mechanism to join them electrically when
 you press the button in red):
 
-![Push Button Schematic](images/button_1.png)
+![Push Button Schematic](/docs/assets/res/button_1.png)

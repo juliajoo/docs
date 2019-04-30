@@ -1,4 +1,12 @@
-# Displays
+---
+layout: post
+title:  "Displays"
+date:   2019-04-30 01:30:13 +0000
+categories: Actuators
+tags: Displays
+---
+
+Some info about displays!
 
 ## Color TFT LCD displays
 
@@ -12,7 +20,7 @@ There's internal logic that ensures you can use this  with 3.3 or 5v power and l
 
 Lets start by knowing what each pin on the breakout does:
 
-![](images/display_1.png)
+![](/docs/assets/res/display_1.png)
 
 1. **Lite** - PWM input for the backlight control. Connect to 3-5VDC to turn on, to ground to turn it off or, you can PWM for intensity of the blacklight;
 2. **MISO** - this is the SPI Master In - Slave Out pin, used for the SD card. It isn't used for the TFT display which is write-only;
@@ -47,11 +55,11 @@ Consisting of 4 signals:
 #### SPI with Arduino
 First of all; MISO, MOSI, and SCK are available in a consistent physical location on the ICSP header:
 
-![](images/display_2.png)
+![](/docs/assets/res/display_2.png)
 
 You can find the places for the headers in this schematic of the Mega, although you can also use some (specific) digital pins. the white dot means its the pin number 1 of ICSP. You can then refer to these pins as ICSP-1, 2, etc:
 
-![](images/display_3.png)
+![](/docs/assets/res/display_3.png)
 
 ### Examples
 In this section, we'll go over two basic examples, to learn the basics of using this screen with the Arduino.
@@ -65,7 +73,7 @@ In this first example, let's run through all of the available graphics drawing f
 
 ##### Schematic
 
-![](images/display_4.png)
+![](/docs/assets/res/display_4.png)
 
 ###### Pins of the Screen Breakout (left to right):
 * Gnd;
@@ -82,7 +90,7 @@ In this first example, let's run through all of the available graphics drawing f
 ##### Results
 Once you've run the example program, you should see this in your serial!
 
-![](images/display_1.gif)
+![](/docs/assets/res/display_1.gif)
 #### Display Images on the TFT Screen by using a microSD card
 
 In this program, we'll be displaying images in the screen (in bitmap image format)!
@@ -92,7 +100,7 @@ Start by converting some images to 160x128 24bit color bitmap format, and placin
 
 ##### Schematic
 
-![](images/display_5.png)
+![](/docs/assets/res/display_5.png)
 
 ###### Pins of the Screen Breakout (left to right):
 * Gnd;
@@ -109,4 +117,4 @@ Start by converting some images to 160x128 24bit color bitmap format, and placin
 #####  Results
 You should see this in your console at the end!
 
-![](images/display_2.gif)
+![](/docs/assets/res/display_2.gif)

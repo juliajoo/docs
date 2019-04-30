@@ -1,4 +1,12 @@
-# LEDs
+---
+layout: post
+title:  "LEDs"
+date:   2019-04-30 01:30:13 +0000
+categories: Actuators
+tags: LEDs
+---
+
+Some info about LEDs!
 
 ## 1 LEDs
 
@@ -14,7 +22,7 @@ fry it!.
 That's why you'll see that normally you have a resistor in series with the LED,
 to assure that not too much current goes through it.
 
-![](images/led_6.png)
+![](/docs/assets/res/led_6.png)
 
 By knowing the forward current and voltage of an LED, and the available power
 source's voltage, you can calculate how big the resistor you apply in series
@@ -45,7 +53,7 @@ that our eyes "average" the result! So an LED with a duty cycle of 25% looks 25%
 as bright as the normal LED! Notice that all of this is done digitally, so,
 essentially PWM is a way of getting analog like results with digital means.
 
-![](images/led_8.png)
+![](/docs/assets/res/led_8.png)
 
 You can use PWM with the pins that have the tag PWM in Arduino, and can use the
 function analogWrite() for establishing the duty cycle on a pin that can use PWM,
@@ -53,7 +61,7 @@ with a value from 0 (0%) to 255 (100%).
 
 Below, you can see the pins you can use with PWM!
 
-![](images/led_9.png)
+![](/docs/assets/res/led_9.png)
 
 ### Examples
 
@@ -68,7 +76,7 @@ for a most LEDs), together with the 5v output of the Arduino.
 
 #### Schematic:
 
-![](images/led_10.png)
+![](/docs/assets/res/led_10.png)
 
 ### Simple LED with Pulsing intensity using PWM
 
@@ -77,11 +85,11 @@ this time!
 
 #### Schematic:
 
-![](images/led_11.png)
+![](/docs/assets/res/led_11.png)
 
 #### Result
 
-![](images/led_1.gif)
+![](/docs/assets/res/led_1.gif)
 
 ## 3 NeoPixel 5mm Diffused LED
 
@@ -91,7 +99,7 @@ use of the NeoPixel library for Arduino.
 
 Lets see the pins and what they're for:
 
-![NeoPixel 5mm Diffused LED](images/led_12.png)
+![NeoPixel 5mm Diffused LED](/docs/assets/res/led_12.png)
 
 1. Data In, where we connect our arduino data pin (and a 470 Ω resistor);
 2. Vcc input pin, (5v);
@@ -131,7 +139,7 @@ the two.
 This example was made with two LEDs, you can of course choose how many you want,
 taking care you're feeding them enough current and voltage.
 
-![Schematic Diffused LEDs](images/led_13.png)
+![Schematic Diffused LEDs](/docs/assets/res/led_13.png)
 
 You can find the code for this example here:
 <a href="https://github.com/datacentricdesign/wheelchair-design-platform/blob/master/examples/actuators/leds/diffused_led/diffused_led.ino" target="_blank">Diffused LED example</a>
@@ -140,4 +148,4 @@ You can find the code for this example here:
 
 This is how your serial should look like!
 
-![Result Diffused LEDs](images/led_2.gif)
+![Result Diffused LEDs](/docs/assets/res/led_2.gif)

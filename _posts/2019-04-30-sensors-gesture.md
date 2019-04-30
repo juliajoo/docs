@@ -1,10 +1,18 @@
-# Proximity, Light, RGB, and Gesture Sensors
+---
+layout: post
+title:  "Proximity, Light, RGB, and Gesture Sensors"
+date:   2019-04-30 01:30:13 +0000
+categories: Sensors
+tags: Proximity Light RGB Gesture
+---
+
+Some info about Proximity, Light, RGB, and Gesture Sensors
 
 ## Adafruit APDS9960
 
 This breakout has a lot of integrated sensors, and allows the addition of basic gesture sensing (left, up, down, right), RGB color sensing (detect amount of R, G, B light), proximity sensing (how close an object is to the front of the sensor), and Ambient light sensing (how much clear light).
 
-![](images/apds99603_1.png)
+![](/docs/assets/res/apds99603_1.png)
 
 ### Pins
 1.  Vin, (3-5V);
@@ -30,7 +38,7 @@ This breakout uses the Library Adafruit APDS9960 library.
 In this example we're going to test the gesture features of the board!
 
 ##### Schematic
-![](images/apds99603_2.png)
+![](/docs/assets/res/apds99603_2.png)
 
 ##### Results
-![](images/apds99603_3.gif)
+![](/docs/assets/res/apds99603_3.gif)

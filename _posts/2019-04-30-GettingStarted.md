@@ -1,4 +1,10 @@
-# Getting Started
+---
+layout: post
+title:  "Getting Started"
+date:   2019-04-30 01:30:13 +0000
+categories: Tutorials
+tags: Setup
+---
 
 In this tutorial, you will setup a development environment for Python and Arduino.
 
@@ -44,7 +50,7 @@ python --version
 
 If Python 3 is installed, the result should look as follows:
 
-![Flowchart Push Button](images/check_python_version.png)
+![Flowchart Push Button](/docs/assets/res/check_python_version.png)
 
 If the command results are 'Command Not found' (or an equivalent message), you need
 to install Python 3. Otherwise, skip to section 2.2.

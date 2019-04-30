@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Orientation Sensor"
+date:   2019-04-30 01:30:13 +0000
+categories: Sensors
+tags: Orientation
+---
+
+Some info about orientation
+
 # Orientation Sensors
 
 These sensors serve to provide orientation data, and they normally mix several
@@ -5,7 +15,7 @@ different sensors such as accelerometers, gyroscopes and magnetometers.
 
 ## BNO055 Intelligent 9-axis absolute orientation sensor
 
-![](images/orientation_1.png)
+![](/docs/assets/res/orientation_1.png)
 
 This 9-DOF (Degrees of freedom) sensor turns the sensor data from an accelerometer,
 gyroscope and magnetometer into 3D space orientation.
@@ -40,7 +50,7 @@ The data from this board can be accessed in several formats, namely:
 
 Now, lets see what each pin of this board is for:
 
-![](images/orientation_2.png)
+![](/docs/assets/res/orientation_2.png)
 
 * **Vin** - 3.3-5.0V power supply input;
 * **3vo** - 3.3V output from internal voltage regulator, may supply up to 500mA, if needed;
@@ -65,7 +75,7 @@ BNO055, if you need to connect two ICs on the same I2C bus. The default address 
 
 ##### Schematic (for all examples)
 
-![](images/orientation_3.png)
+![](/docs/assets/res/orientation_3.png)
 
 #### Basic Three Axis orientation data (in Euler angles)
 
@@ -87,7 +97,7 @@ The axes of the original frame are denoted as x, y, z and the axes of the rotate
 frame as X, Y, Z. The geometrical definition (sometimes referred to as static)
 begins by defining the line of nodes as the intersection of the planes xy and XY.
 
-![](images/orientation_4.png)
+![](/docs/assets/res/orientation_4.png)
 
 Using it, the three Euler angles can be defined as follows:
  ⍺ (or φ) β- is the angle between the x axis and the N axis (x-convention - it
@@ -98,7 +108,7 @@ Using it, the three Euler angles can be defined as follows:
 ##### Results
 Here's how your console should look in the end:
 
-![](images/orientation_1.gif)
+![](/docs/assets/res/orientation_1.gif)
 
 #### Basic Three Axis raw data
 
@@ -109,7 +119,7 @@ In this example, all types of possible raw data from the IMU are given.
 ##### Results
 Here's how your console should look in the end:
 
-![](images/orientation_3.gif)
+![](/docs/assets/res/orientation_3.gif)
 
 #### Basic Rotation calculations
 
@@ -122,7 +132,7 @@ the beginning of the activation of the IMU are computed.
 ##### Results
 Here's how your console should look in the end:
 
-![](images/orientation_2.gif)
+![](/docs/assets/res/orientation_2.gif)
 
 
 ## Sparkfun RGB rotary encoder
@@ -148,7 +158,7 @@ This encoder is conveniently soldered into a breakout board, for easy use with a
 breadboard and access of its I/O.  With the help of the following diagram we can
 see how this encoder works.
 
-![](images/rotary_encoder_1.png)
+![](/docs/assets/res/rotary_encoder_1.png)
 
 1. B contact, one of the data pins;
 2. "Common" contact - to be connected to ground;
@@ -160,7 +170,7 @@ see how this encoder works.
 8. "Vcc" connector, to be connected to 3.3V.
 
 Let's review how an rotary encoder works:
-![](images/rotary_encoder_2.gif)
+![](/docs/assets/res/rotary_encoder_2.gif)
 
 The incremental rotary encoder works in a very simple way. There are 3 terminals,
 where C is the common, which is connected to ground. The rotary encoder also has
@@ -182,11 +192,11 @@ R : 2V
 G : 3.3V
 B : 3.3V
 
-![](images/rotary_encoder_3.png)
+![](/docs/assets/res/rotary_encoder_3.png)
 
 #### Results
 
 Now you should have a working RGB encoder! Below you can find what your serial
 output should look like:
 
-![](images/rotary_encoder_4.gif)
+![](/docs/assets/res/rotary_encoder_4.gif)

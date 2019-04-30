@@ -1,10 +1,18 @@
-# Light and color
+---
+layout: post
+title:  "Light and color sensors"
+date:   2019-04-30 01:30:13 +0000
+categories: Sensors
+tags: Light Color
+---
+
+Some info about light and color
 
 ## Adafruit APDS9960
 
 This breakout has a lot of integrated sensors, and allows the addition of basic gesture sensing (left, up, down, right), RGB color sensing (detect amount of R, G, B light), proximity sensing (how close an object is to the front of the sensor), and Ambient light sensing (how much clear light).
 
-![](images/apds99603_1.png)
+![](/docs/assets/res/apds99603_1.png)
 
 ### Pins
 1. Vin, (3-5V);
@@ -29,7 +37,7 @@ This breakout uses the Library Adafruit APDS9960 library.
 In this example we're going to test the RGB color sensing features of the board!
 
 #### Schematic
-![](images/apds99603_1.png)
+![](/docs/assets/res/apds99603_1.png)
 
 #### Results
-![](images/apds99603_2.gif)
+![](/docs/assets/res/apds99603_2.gif)
