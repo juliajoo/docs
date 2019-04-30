@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Force"
+title:  "Force Sensing Resistors"
 date:   2019-04-30 01:30:13 +0000
 categories: Sensors
-tags: Force
+tags: Force FSR
 ---
 
 Some info about force sensors
@@ -36,6 +36,9 @@ The common way to use this transducer is with the use of a voltage divider circu
 Here's the whole sensor system diagram:
 
 ![](/docs/assets/res/force_4.png)
+
+You can find the example of code [here](https://github.com/datacentricdesign/docs/blob/master/examples/sensors/force/fsr_406/fsr_406.ino)
+
 
 #### Results
 Let's see what the console looks like in the end!
