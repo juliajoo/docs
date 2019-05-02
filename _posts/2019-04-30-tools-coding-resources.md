@@ -6,9 +6,7 @@ categories: Tools
 tags: Language Development Python Arduino C++
 ---
 
-# Software resources
-
-Here are some suggested website and books to get started with programming environments
+Here are some suggested website and books to get started with programming environments.
 
 ## Python
 

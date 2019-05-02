@@ -34,7 +34,7 @@ has:
   dimensions ([See Property Types](#property-types))
   * a list of dimensions
   * a 2-dimension list of values, starting with a [UNIX TIMESTAMP](https://www.unixtimestamp.com/)
-  and followed by the value of each dimension. All vaues MUST be numbers.
+  and followed by the value of each dimension. All values MUST be numbers.
 
 ```json
 [
@@ -752,5 +752,4 @@ you can always go back to the manager to retrieve this id.
       }
     ]
   }
-};
 ```
