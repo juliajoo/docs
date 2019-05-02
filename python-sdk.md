@@ -138,7 +138,7 @@ current users.
 At this stage you need the credentials of the [Thing](/docs/api.html#Thing) you 
 want to connect to the hub. If you do not have one yet, please sign in/sign up to
 the DCD Hub and create a [Thing](/docs/api.html#Thing) following the instructions
-[here](/docs/api.html#signup).
+[here](/docs/api.html#sign-up).
 
 In Atom, right click at the root of your project (left panel) and create a file
 'random-data.py'.
