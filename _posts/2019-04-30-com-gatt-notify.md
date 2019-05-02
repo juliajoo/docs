@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Tutorial 2: Sensing over Bluetooth"
+title:  "Sensing over Bluetooth with GATT Notification Service"
 date:   2019-04-30 01:30:13 +0000
-categories: Tutorials
-tags: Wheelchair
+categories: Communication
+tags: Wheelchair Bluetooth GATT Feather
 ---
 
 In this tutorial we lead you setp-by-step to experience the capabilities of an 

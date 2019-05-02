@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Tutorial 3: Rotation to Vibration"
+title:  "Rotation to Vibration over Bluetooth GATT and Serial"
 date:   2019-04-30 01:30:13 +0000
-categories: Tutorials
-tags: Wheelchair
+categories: Communication
+tags: Wheelchair Bluetooth GATT Feather
 ---
 
 In this tutorial we lead you step-by-step to implement three actuators (vibration
