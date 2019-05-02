@@ -25,7 +25,7 @@ of data.
 your-property-id,value
 ```
 
-## Step 4: Python
+## Step 3: Python
 
 The last step is to write a Python code on your laptop to read the Serial input
 from the Arduino and forward them to the Data-Centric Design Hub.
