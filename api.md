@@ -35,10 +35,11 @@ has:
   * a list of dimensions
   * a 2-dimension list of values, starting with a [UNIX TIMESTAMP](https://www.unixtimestamp.com/)
   and followed by the value of each dimension. All vaues MUST be numbers.
-  
+
 ```json
 [
-  ["UNIX timestamp", "value-dimension-1", "value-dimension-2"], ["UNIX timestamp", "value-dimension-1", "value-dimension-2"]
+  ["UNIX timestamp", "value-dimension-1", "value-dimension-2"],
+  ["UNIX timestamp", "value-dimension-1", "value-dimension-2"]
 ]
 ```
   
