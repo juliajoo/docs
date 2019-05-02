@@ -33,16 +33,20 @@ has:
   * a type, which characterise the nature of the property and its number of
   dimensions ([See Property Types](#property-types))
   * a list of dimensions
-  * a list of values
+  * a 2-dimension list of values, starting with a [UNIX TIMESTAMP](https://www.unixtimestamp.com/)
+  and followed by the value of each dimension. All vaues MUST be numbers.
+  
+```json
+[
+  ["UNIX timestamp", "value-dimension-1", "value-dimension-2"], ["UNIX timestamp", "value-dimension-1", "value-dimension-2"]
+]
+```
+  
   * a list of classes (optional): if the property type is 'CLASS', you can associate
   text to the values. This is useful when using a property as data label.
 
 
-```json
-[
-  [UNIX timestamp, value-dimension-1, value-dimension-2,...], [UNIX timestamp, value-dimension-1, value-dimension-2,...]
-]
-```
+
 
 # Sign up
 
