@@ -28,7 +28,11 @@ the Jupyter web interface. Otherwise, a link shows up in the terminal, you can
 copy/paste it in your web browser.
 
 Downloads this Jupyter example to start exploring the your data:
-![jupyter-analysis.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/jupyter-analysis.ipynb)
+[jupyter-analysis.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/jupyter-analysis.ipynb)
+
+Right-click on 'Raw' > 'Save link As...' to save the file on your computer.
+
+![Jupyter Example](/docs/assets/res/jupyter-example.png)
 
 Back in Jupyter, click on File > Open
 
