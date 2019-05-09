@@ -8,8 +8,6 @@ tags: Jupyter
 
 In this post we introduce Jupyter Notebook as a way to explore data from the DCD Hub.
 
-# Installation
-
 Note: if you use Anaconda, Jupyter Notebook is likely to be installed already.
 
 You can install Jupyter Notebook with the following commands in the terminal:
@@ -25,4 +23,18 @@ Then, you can start with:
 jupyter notebook
 ```
 
-# 
+Running this command should redirect you to your favorite web browser and open
+the Jupyter web interface. Otherwise, a link shows up in the terminal, you can
+copy/paste it in your web browser.
+
+Downloads this Jupyter example to start exploring the your data:
+![jupyter-analysis.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/jupyter-analysis.ipynb)
+
+Back in Jupyter, click on File > Open
+
+![Jupyter Open](/docs/assets/res/jupyter-open.png)
+
+Then, click on Upload
+
+![Jupyter Upload](/docs/assets/res/jupyter-upload.png)
+
