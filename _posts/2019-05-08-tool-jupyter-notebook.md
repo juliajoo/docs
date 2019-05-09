@@ -2,7 +2,7 @@
 layout: post
 title:  "Exploring Data with Jupyter Notebook"
 date:   2019-05-08 01:30:13 +0000
-categories: Tool
+categories: Tools
 tags: Jupyter
 ---
 
