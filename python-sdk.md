@@ -144,7 +144,7 @@ In Atom, right click at the root of your project (left panel) and create a file
 'random-data.py'.
 
 In this file, add the following lines to import the definition of a 
-[Thing](/docs/api.html#Thing) and [PropertyType](/docs/api.html#PropertyType)
+[Thing](/docs/api.html#Thing) and [PropertyType](/docs/api.html#property-types)
 from the Python SDK.
 
 ```python

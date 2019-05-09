@@ -15,15 +15,18 @@ It is useful to collect a dataset ready for training a machine learning algorith
 In this example we will collect data from 12 FSRs installed on a chair and label
 it with the three classes: 'Not Sitting', 'Proper Sitting' and 'Leaning Forward'.
 
-* Connect to a Thing
-* Create a Class Property
-* Collect and Label
+* [Connect to a Thing](#connect-to-a-thing)
+* [Create a Class Property](#create-a-class-property)
+* [Serial Connection](#serial-connection)
+* [Collect and Label](#collect)
 
 
 # Connect to a Thing
 
 We start with a typical connection to the DCD hub, bringing the Python dependencies
-importing the thing ID and token from the .env file and instantiating an Thing.
+importing the thing ID and token from the .env file and instantiating an Thing. Refer
+to the [Python SDK (Step 5)](/https://datacentricdesign.github.io/docs/python-sdk#step-5-connecting-a-thing-to-the-hub)
+if you did not set up your .env file yet.
 
 ```python
 # Import required library
