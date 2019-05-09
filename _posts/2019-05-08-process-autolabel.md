@@ -21,6 +21,8 @@ it with the three classes: 'Not Sitting', 'Proper Sitting' and 'Leaning Forward'
 * [Collect and Label](#collect)
 
 
+![Jupyter Example](/docs/assets/res/collect-labelled-data.png)
+
 # Connect to a Thing
 
 We start with a typical connection to the DCD hub, bringing the Python dependencies
