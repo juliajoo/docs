@@ -11,7 +11,7 @@ static const int SAMPLING_RATE = 100;
 static const int DEVIATION = 10;
 
 // Property id
-static const String PROPERTY_ID = "fsr-1ebb";
+static const String PROPERTY_NAME = "FSR";
 
 // Current value from sensor (read from analog port)
 int value;
@@ -42,7 +42,7 @@ double convert_to_newtons( double voltage) {
 
 // Send data over serial
 void push_data(double values[]) {
-    Serial.print(PROPERTY_ID);
+    Serial.print(PROPERTY_NAME);
     for (int i = 0; i<sizeof(FSR); i++) {
       Serial.print(",");
       Serial.print(values[i]);

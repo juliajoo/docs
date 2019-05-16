@@ -1,36 +1,3 @@
----
-layout: post
-title:  "Automatically Labelling Data at Collection Time in Python"
-date:   2019-05-08 01:30:13 +0000
-categories: Process
-tags: ML Label Data Python Serial
----
-
-In this post, we explore how to set up a Python script to automatically labelling
-data at collection time in Python. The script prompts the user with the classes
-to perform and associates the corresponding label to the recorded data.
-
-It is useful to collect a dataset ready for training a machine learning algorithm.
-
-In this example we will collect data from 12 FSRs installed on a chair and label
-it with the three classes: 'Not Sitting', 'Proper Sitting' and 'Leaning Forward'.
-
-* [Connect to a Thing](#connect-to-a-thing)
-* [Create a Class Property](#create-a-class-property)
-* [Serial Connection](#serial-connection)
-* [Collect and Label](#collect)
-
-
-![Jupyter Example](/docs/assets/res/collect-labelled-data.png)
-
-# Connect to a Thing
-
-We start with a typical connection to the DCD hub, bringing the Python dependencies
-importing the thing ID and token from the .env file and instantiating an Thing. Refer
-to the [Python SDK (Step 5)](/https://datacentricdesign.github.io/docs/python-sdk#step-5-connecting-a-thing-to-the-hub)
-if you did not set up your .env file yet.
-
-```python
 # Import required library
 from dotenv import load_dotenv
 import os
@@ -48,18 +15,7 @@ THING_TOKEN = os.environ['THING_TOKEN']
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 my_thing.read()
-```
 
-# Create a Class Property
-
-The next step is to create a Property of type CLASS. Like any Property we give it
-a name, e.g. 'Sitting Posture'. The type CLASS means that the property has 1-dimension
-values and this value is a integer from 0 to n-1, where n is the number of classes.
-In this example n = 3 and values should be 0 (Not Sitting), 1 (Proper Sitting) and
-2 (Leaning Forward).
-
-
-```python
 LABEL_PROP_NAME = "Sitting Posture"
 LABEL_PROP_TYPE = PropertyType.CLASS
 
@@ -75,15 +31,8 @@ if prop_label.classes is None or len(prop_label.classes) == 0:
     prop_label.create_classes(CLASSES)
 # Find data property by name
 prop_data = my_thing.find_or_create_property(DATA_PROP_NAME, DATA_PROP_TYPE)
-```
 
-# Serial Connection
 
-To label data coming from the serial port, we can modify the 
-[serial example code](/docs/2019/04/30/com-serial). We first wrap the serial
-connection into a function. This will facilitate its use in the next section.
-
-```python
 # Open a serial connection
 def open_serial():
     # Start reading the serial port
@@ -91,13 +40,8 @@ def open_serial():
         port=os.environ['SERIAL'],
         baudrate=9600,
         timeout=2)
-```
 
-Then we modify the serial_to_property_values to pass two parameters: the index of
-the current class (e.g. what sitting posture are we currently collecting) and the
-serial connection.
 
-```python
 # Read the next line from the serial port
 # and update the property values
 def serial_to_property_values(class_index, ser):
@@ -129,16 +73,8 @@ def serial_to_property_values(class_index, ser):
 
         return True
     return False
-```
 
-# Collect
 
-The last step consists in telling the user what to do. We create a function
-create_and_label which take the index of a class as parameter. This function 
-displays the current class for a given time (DELAY_BETWEEN_POSTURE), then open
-the serial port to start collecting and labelling data for the given class.
-
-```python
 # How many samples do we want for each class
 MAX_SAMPLES = 300
 # How much time (in seconds) to leave between the collection of each class
@@ -163,17 +99,11 @@ def collect(class_index):
             sample += 1
             print("Remaining samples: " + str(MAX_SAMPLES - sample))
     ser.close()
-```
 
-Finally, we loop through all classes and collect data.
 
-```python
 class_index = 0
 while class_index < len(CLASSES):
     collect(class_index)
     class_index = class_index + 1
 
 print("Data collection done.")
-```
-
-You can find the code of this example [here](https://github.com/datacentricdesign/docs/blob/master/examples/process/collect.py)

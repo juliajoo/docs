@@ -109,7 +109,7 @@ In Atom, right click at the root of your project (left panel), create a file
 'requirements.txt' and type in the following line.
 
 ```txt
-dcd-sdk>=0.0.12
+dcd-sdk>=0.0.16
 ```
 
 This is the dependence to Python SDK of the Data-Centric Design Hub.

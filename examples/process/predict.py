@@ -1,55 +1,3 @@
----
-layout: post
-title:  "Training a Machine Learning algorithm with data from the DCD Hub in Python"
-date:   2019-05-15 01:30:13 +0000
-categories: Process
-tags: ML Label Data Python
----
-
-In this post we train a machine learning algorithm with data from the DCD Hub,
-in Python. We 
-
-# Train
-
-We use a Jupyter Notebook to lead you through the training process.
-
-If you do not have Jupyter yet, you can install it with the following commands
-in the terminal:
-
-```bash
-python3 -m pip install --upgrade pip
-python3 -m pip install jupyter
-```
-
-Then, you can start with:
-
-```bash
-jupyter notebook
-```
-
-Running this command should redirect you to your favorite web browser and open
-the Jupyter web interface. Otherwise, a link shows up in the terminal, you can
-copy/paste it in your web browser.
-
-Downloads this Jupyter example to start exploring the your data (right-click and 'Save link As...'):
-[training.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/training.ipynb)
-
-Back in Jupyter, click on File > Open
-
-![Jupyter Open](/docs/assets/res/jupyter-open.png)
-
-Then, click on Upload
-
-![Jupyter Upload](/docs/assets/res/jupyter-upload.png)
-
-
-# Predict
-
-Once you trained your classifier and save its model in a file, you are ready to
-use it for prediction.
-
-
-```python
 from dotenv import load_dotenv
 import os
 import pickle
@@ -130,7 +78,3 @@ def serial_to_property_values():
 
 while True:
     serial_to_property_values()
-
-```
-
-You can find the code of this example [here](https://github.com/datacentricdesign/docs/blob/master/examples/process/predict.py)

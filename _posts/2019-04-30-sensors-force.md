@@ -37,10 +37,14 @@ Here's the whole sensor system diagram:
 
 ![Sensor system diagram](/docs/assets/res/force_4.png)
 
-You can find the example of code [here](https://github.com/datacentricdesign/docs/blob/master/examples/sensors/force/fsr_406/fsr_406.ino)
+You can find the example of code [here](https://github.com/datacentricdesign/docs/blob/master/examples/sensors/force/fsr_406/fsr_406.ino).
 
 
 #### Results
 Let's see what the console looks like in the end!
 
 ![Result](/docs/assets/res/force_1.gif)
+
+
+You can find an example of code with 12 FSR 
+[here](https://github.com/datacentricdesign/docs/blob/master/examples/sensors/force/fsr_406_x12/fsr_406_x12.ino).
