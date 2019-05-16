@@ -7,13 +7,8 @@ tags: ML Label Data Python
 ---
 
 In this post we train a machine learning algorithm with data from the DCD Hub,
-in Python. We 
-
-# Train
-
-We use a Jupyter Notebook to lead you through the training process.
-
-If you do not have Jupyter yet, you can install it with the following commands
+in Python. We use a Jupyter Notebook to lead you through the training process. If
+you do not have Jupyter yet, you can install it with the following commands
 in the terminal:
 
 ```bash
@@ -30,6 +25,30 @@ jupyter notebook
 Running this command should redirect you to your favorite web browser and open
 the Jupyter web interface. Otherwise, a link shows up in the terminal, you can
 copy/paste it in your web browser.
+
+
+# Requirements
+
+Make sure you have the proper dependencies to run this code. To do so, you can
+create a file 'requirements.txt' and write the name of the dependencies as follows:
+
+```txt
+dcd-sdk>=0.0.16
+paho-mqtt
+python-dotenv
+pyserial
+requests
+sklearn
+numpy
+```
+
+Then execute the following command:
+
+```bash
+python3 -m pip install -r requirements.txt --user
+```
+
+# Train
 
 Downloads this Jupyter example to start exploring the your data (right-click and 'Save link As...'):
 [training.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/training.ipynb)

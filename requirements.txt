@@ -1,1 +1,7 @@
 dcd-sdk>=0.0.16
+paho-mqtt
+python-dotenv
+pyserial
+requests
+sklearn
+numpy
