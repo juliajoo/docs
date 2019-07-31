@@ -297,6 +297,6 @@ defines what is in the condition. Any following line aligned with the if would b
 considered outside the condition.
 
 You can execute the Python script again and check incoming data with
-[Grafana](/docs/2019/04/30/tool-granafa).
+[DCD data subject](/docs/2019/07/31/tool-data-subject).
 
 Back in the Atom terminal, stop your Python script with CMD+C (Ctrl+C).

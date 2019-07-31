@@ -47,12 +47,10 @@ has:
   text to the values. This is useful when using a property as data label.
 
 
-
-
 # Sign up
 
 We now want to register an account for a cloud service. We will use the prototype
-from TU Delft IDE's Faculty of the Data-Centric Design Hub. Go to <a href="https://dwd.tudelft.nl/manager" target="_blank">https://dwd.tudelft.nl/manager</a>
+from TU Delft IDE's Faculty of the Data-Centric Design Hub. Go to <a href="https://dwd.tudelft.nl/subject" target="_blank">https://dwd.tudelft.nl/subject</a>
 
 ![Flowchart Push Button](/docs/assets/res/dcdhub.png)
 
@@ -68,22 +66,16 @@ help you manage them. To do so click "Allow access".
 
 Once the consent succeeded, you can click on '+' button and create a first one.
 
-<p>
-<IMG SRC="/docs/assets/res/create_thing_button.png" width=750>
-</p>
+![Flowchart Push Button](/docs/assets/res/create_thing_button.png)
 
 For example with the name 'my wheelchair', type 'Wheelchair', and a
 description 'An Internet-connected wheelchair'.
 
-<p>
-<IMG SRC="/docs/assets/res/create_thing_dialog.png" width=750>
-</p>
+![Flowchart Push Button](/docs/assets/res/create_thing_dialog.png)
 
 The process may take a few seconds, as the hub generates an access token for your Thing.
 
-<p>
-<IMG SRC="/docs/assets/res/create_thing_jwt.png" width=750>
-</p>
+![Flowchart Push Button](/docs/assets/res/create_thing_jwt.png)
 
 **COPY AND SAVE THIS TOKEN** in a text file, it will be shown only once and enables
 your wheelchair to communicate with the hub. You can also save the thing id, but
