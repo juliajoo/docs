@@ -125,7 +125,7 @@ python -m pip install -r requirements.txt --user
 __On Mac and Linux__, type in:
 
 ```bash
-pip3 install -r requirements.txt --user
+pip install -r requirements.txt --user
 ```
 
 Here we 'install' the Python dependencies for our project. The option -r indicates
