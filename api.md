@@ -66,7 +66,7 @@ help you manage them. To do so click "Allow access".
 
 Once the consent succeeded, you can click on '+' button and create a first one.
 
-<img src="assets/res/create_thing_button.png" alt="drawing" width="750"/>
+<img src="/docs/assets/res/create_thing_button.png" alt="drawing" width="750"/>
 
 For example with the name 'my wheelchair', type 'Wheelchair', and a
 description 'An Internet-connected wheelchair'.
@@ -75,7 +75,7 @@ description 'An Internet-connected wheelchair'.
 
 The process may take a few seconds, as the hub generates an access token for your Thing.
 
-![](/docs/assets/res/create_thing_jwt.png =750x)
+<img src="/docs/assets/res/create_thing_jwt.png" alt="drawing" width="750"/>
 
 **COPY AND SAVE THIS TOKEN** in a text file, it will be shown only once and enables
 your wheelchair to communicate with the hub. You can also save the thing id, but

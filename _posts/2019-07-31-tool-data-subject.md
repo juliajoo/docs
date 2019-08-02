@@ -6,8 +6,21 @@ categories: Tools
 tags: Visualisation
 ---
 
-Tools on how to use the <a href="https://dwd.tudelft.nl/subject" target="_blank">DCD data subject website</a>
+Tools on how to use the DCD data subject website for visualise data.
+To access it, go to the [dwd.tudelft.nl/subject](https://dwd.tudelft.nl/subject) and sign in with your DCD Hub credentials.
 
-# Visualisation
+![Flowchart Push Button](/docs/assets/res/signin.png)
 
-TODO
+To visualize values, there are two ways:
+1. Visualize the values by property
+2. Visualize the values of all properties of the thing
+
+![Flowchart Push Button](/docs/assets/res/data-subject-thing.png)
+
+When you select the boutton by property, the following window appears :
+
+<img src="/docs/assets/res/data-subject-visualize-thing.png" alt="drawing" width="500"/>
+
+When you select the boutton by thing, the following window appears :
+
+<img src="/docs/assets/res/data-subject-visualize-thing.png" alt="drawing" width="750"/>

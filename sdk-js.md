@@ -3,17 +3,17 @@ layout: page
 title: "JavaScript SDK"
 ---
 
-## Getting Started
+# Getting Started
 
 If you have already install Node JS, you can directly skip to step 2.
 
-### Step 1 : Install Node JS
+## Step 1 : Install Node JS
 
 Follow the step in the followed link : https://nodejs.org/en/download/
 
-### Step 2 : Init and install the SDK
+## Step 2 : Init and install the SDK
 
-#### Init package.json file
+**Init package.json file**
 
 In your project folder, you have to create a package.json file for add all the dependencies that we need.
 Open a Command line and go to your project root and type the folowing command :
@@ -22,13 +22,13 @@ Open a Command line and go to your project root and type the folowing command :
 
 Validate the project features with the enter button and finish to create you package.json file by typing 'yes'.
 
-#### Install the javascript SDK
+**Install the javascript SDK**
 
 - `npm install dcd-sdk-js`
 
-### Step 3 Connecting a Thing to the Hub
+## Step 3 Connecting a Thing to the Hub
 
-#### Import the javascript SDK tools
+**Import the javascript SDK tools**
 
 At this stage you need the credentials of the Thing you want to connect to the hub. If you do not have one yet, please sign in/sign up to the DCD Hub and create a Thing following the instructions here.
 
@@ -40,7 +40,7 @@ In this file, add the following line to import Javascript SDK tools.
 const dcd = require('dcd-sdk-js')
 ```
 
-#### Set the credential 
+**Set the credential** 
 
 Then, we set the credential of our Thing. In Javascript, it means we look at the environment variables to read the id and access token of our thing. To provide these information as environment variable, right click at the root of your project (left panel) and create a file ‘.env’.
 
@@ -53,7 +53,7 @@ THING_TOKEN=
 
 Note: If your are using Git, you do not want to track the file ‘.env’ with Git as it contains secrets. To avoid any mistake, the file .gitignore list all files, folders and extensions to ignore. Create a file ‘.gitignore’ and add a new line with ‘.env’.
 
-####  Import our credential
+**Import our credential**
 
 For that we need to import additional node.js packages. It is necessary for the search and reading of our .env file.
 In a command line type the folowing command :
@@ -149,7 +149,7 @@ dcd.PropertyType.THREE_DIMENSIONS)
 })
 ```
 
-### Step 4 Execute the Javascript code
+## Step 4 Execute the Javascript code
 
 Let's execute this code. Go to the terminal and type in the following command :
 
@@ -157,7 +157,7 @@ Let's execute this code. Go to the terminal and type in the following command :
 node random-data.js
 ```
 
-### Step 5 Sending Data
+## Step 5 Sending Data
 
 With this code we are ready to send data to the DCD Hub. To send random data, we are going to use two javascript functions, the first, *Math.random()* for generating random numbers, the second, *setInterval()* to set an interval between scripts (pausing the programme).
 
@@ -187,13 +187,16 @@ setInterval(function(){
     },2000) // 2 seconds break
 ```
 
+You can execute the Javascript script again and check incoming data with
+[DCD data subject](/docs/2019/07/31/tool-data-subject).
+
 Back in the terminal, stop your Javascript script with CMD+C (Ctrl+C).
 
-## Services functions
+# Services functions
 
 Here are all the functions you can use to manage the Persons, things and property of your application
 
-### Person Service
+## Person Service
  ```js
  const dcd = require('dcd-sdk-js')
  const token = 'your_token'
@@ -218,7 +221,7 @@ dcd.PersonService.logout(person_sub,token)
 console.log(data)
 })
  ```
-### Thing Service
+## Thing Service
 
 ```js
  const dcd = require('dcd-sdk-js')
@@ -260,7 +263,7 @@ console.log(data)
 })
 ```
 
-### Property Service
+## Property Service
 
 ```js
 //Read a property with his id
@@ -307,7 +310,7 @@ console.log(data)
 ```
 
 
-## Oauth2 passport Strategy
+# Oauth2 passport Strategy
 
 To create an application that will connect to the hub from Oauth 2 we will use the strategy function :
 
