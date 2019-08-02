@@ -11,7 +11,9 @@ If you have already install Node JS, you can directly skip to step 2.
 
 Follow the step in the followed link : https://nodejs.org/en/download/
 
-## Step 2 : Init and install the SDK
+## Install the SDK
+
+If you have already a package.json file, skip to 'Install the javascript SDK'
 
 **Init package.json file**
 
