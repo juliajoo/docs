@@ -19,7 +19,7 @@ To visualize values, there are two ways:
 
 When you select the boutton by property, the following window appears :
 
-<img src="/docs/assets/res/data-subject-visualize-thing.png" alt="drawing" width="500"/>
+<img src="/docs/assets/res/data-subject-visualize-property.png" alt="drawing" width="750"/>
 
 When you select the boutton by thing, the following window appears :
 
