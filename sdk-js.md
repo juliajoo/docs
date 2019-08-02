@@ -1,6 +1,7 @@
-# Javascript SDK
-
-A Javascript SDK for the Data-Centric Design Hub
+---
+layout: page
+title: "JavaScript SDK"
+---
 
 ## Getting Started
 
