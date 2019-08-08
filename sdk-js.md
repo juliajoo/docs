@@ -9,9 +9,9 @@ If you have already install Node JS, you can directly skip to step 2.
 
 ## Step 1 : Install Node JS
 
-Follow the step in the followed link : https://nodejs.org/en/download/
+Follow the step in the followed link : [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
-## Install the SDK
+## Step 2 : Install the SDK
 
 If you have already a package.json file, skip to 'Install the javascript SDK'
 
