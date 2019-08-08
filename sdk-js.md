@@ -32,7 +32,8 @@ Validate the project features with the enter button and finish to create you pac
 
 **Import the javascript SDK tools**
 
-At this stage you need the credentials of the Thing you want to connect to the hub. If you do not have one yet, please sign in/sign up to the DCD Hub and create a Thing following the instructions here.
+At this stage you need the credentials of the Thing you want to connect to the hub. If you do not have one yet, please sign in/sign up to the DCD Hub and create a [Thing](/docs/api.html#Thing) following the instructions
+[here](/docs/api.html#sign-up).
 
 Right click at the root of your project (left panel) and create a file ‘random-data.js’.
 
