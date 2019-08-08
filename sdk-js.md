@@ -26,7 +26,7 @@ Validate the project features with the enter button and finish to create you pac
 
 **Install the javascript SDK**
 
-- `npm install dcd-sdk-js`
+- `npm install @datacentricdesign/sdk-js`
 
 ## Step 3 Connecting a Thing to the Hub
 
@@ -39,7 +39,7 @@ Right click at the root of your project (left panel) and create a file ‘random
 In this file, add the following line to import Javascript SDK tools.
 
 ```js
-const dcd = require('dcd-sdk-js')
+const dcd = require('@datacentricdesign/sdk-js')
 ```
 
 **Set the credential** 
@@ -200,7 +200,7 @@ Here are all the functions you can use to manage the Persons, things and propert
 
 ## Person Service
  ```js
- const dcd = require('dcd-sdk-js')
+ const dcd = require('@datacentricdesign/sdk-js')
  const token = 'your_token'
 
 //Read user credentials
@@ -226,7 +226,7 @@ console.log(data)
 ## Thing Service
 
 ```js
- const dcd = require('dcd-sdk-js')
+ const dcd = require('@datacentricdesign/sdk-js')
  const token = 'your_token'
 
 //list all things
@@ -338,7 +338,7 @@ const strategyOptions = {
 Example code with an express server :
 
 ```js
-const dcd = require('dcd-sdk-js')
+const dcd = require('@datacentricdesign/sdk-js')
 const express = require('express');
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
@@ -433,4 +433,12 @@ res.redirect(req.session.redirectTo)
 app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
 });
+```
+
+# RouterAPI
+After initializing your server express the Oauth2 Strategy you can use the [routerAPI](https://github.com/datacentricdesign/dcd-sdk-js/blob/master/src/api/index.ts) with the authentification middleware.
+
+```js
+const dcd = require('@datacentricdesign/sdk-js')
+app.use(baseUrl+'/api', checkAuthentication, dcd.RouterAPI);
 ```
