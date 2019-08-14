@@ -225,7 +225,6 @@ console.log(data)
 })
  ```
 ## Thing Service
-
 ```js
  const dcd = require('@datacentricdesign/sdk-js')
  const token = 'your_token'
@@ -267,14 +266,16 @@ console.log(data)
 ```
 
 ## Property Service
-
 ```js
+ const dcd = require('@datacentricdesign/sdk-js')
+ const token = 'your_token'
+
 //Read a property with his id
 const thing_id = 'your_thing_id'
 const property_id = 'your_property_id'
 const from = (new Date('December 17, 2008 03:24:00')).getTime()
 const to = (new Date()).getTime()
-dcd.PropertyService.read(thing_id,property_id,from,to,token)
+dcd.PropertyService.read(thing_id,property_id,token,from,to)
 .then((data)=> {
 console.log(data)
 })
@@ -312,6 +313,26 @@ console.log(data)
 })
 ```
 
+## Stat Service
+```js
+ const dcd = require('@datacentricdesign/sdk-js')
+ const token = 'your_token'
+
+//Get global stats
+dcd.StatService.getGlobalStats(token)
+.then((data)=> {
+console.log(data)
+})
+
+//Get property type stats
+const property_type = "LOCATION"
+const from = (new Date('December 17, 2008 03:24:00')).getTime()
+const to = (new Date()).getTime()
+dcd.StatService.getPropertyTypeStats(PropertyType,token,from,to)
+.then((data)=> {
+console.log(data)
+})
+```
 
 # Oauth2 passport Strategy
 
