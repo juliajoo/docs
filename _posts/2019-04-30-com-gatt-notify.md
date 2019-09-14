@@ -270,7 +270,7 @@ BLUETOOTH_DEVICE_MAC=fb:48:5b:84:36:4a
 
 Then, copy the example
 
-<a href="examples/communication/bluetooth/subscribe_gatt_orentation.py" target="_blank">examples /
+<a href="https://github.com/datacentricdesign/docs/blob/master/examples/communication/bluetooth/subscribe_gatt_orientation.py" target="_blank">examples /
 communication / bluetooth / bno055_gatt</a>
 
 
