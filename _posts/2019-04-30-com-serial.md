@@ -22,8 +22,10 @@ the receiver (Python code), you need to produce the following output for each li
 of data.
 
 ```txt
-your-property-id,value
+My accelerometer,<value-of-x>,<value-of-y>,<value-of-z>
 ```
+
+Thus, each line start with the name of your property followed by the values 
 
 ## Step 3: Python
 
@@ -82,8 +84,7 @@ def serial_to_property_values():
             print('Warning: unknown property ' + property_id)
 ```
 
-You can execute the Python script again and check incoming data with
-[Grafana](/docs/2019/04/30/tool-granafa).
+You can execute the Python script again and check incoming data with on the DCD Hub.
 
 
 

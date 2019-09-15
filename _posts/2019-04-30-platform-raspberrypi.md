@@ -177,18 +177,18 @@ Set up Git
 sudo apt-get install git
 ```
 
-Clone your GitHub repository. Similarly to step 1.4, we now clone your repository.
-This time, we clone it on the Raspberry Pi. For example:
+Clone your GitHub repository. Similarly to cloning the Git repository on your laptop,
+this time we clone it on the Raspberry Pi. For example:
 
 ```bash
-git clone https://github.com/example/wheelchair-design-platform.git
+git clone https://github.com/example/prototype.git
 ```
 
 In the terminal, to navigate through folder we use 'cd'. Enter the folder you have just
 cloned with:
 
 ```bash
-cd wheelchair-design-platform
+cd prototype
 ```
 
 Then, we need to create an .env file, in the project folder, with  THING_ID, the THING_TOKEN and the
@@ -198,7 +198,7 @@ SERIAL port.
 nano .env
 ```
 
-Copy your thing id and token, and use /dev/ttyUSB0 as a serial port (there are other serial ports on your raspberry pi you can try, such as ttyS0, ttyAM0).
+Copy your thing id and token, and use /dev/ttyUSB0 as a serial port (there are other serial ports on your raspberry pi you can try, such as ttyS0, ttyACM0).
 
 ![Change password](/docs/assets/res/env_file.png)
 
@@ -208,9 +208,4 @@ Install the requirements with Pip
 python3 -m pip install -r requirements.txt --user
 ```
 
-
-```bash
-python3 wheelchair/serial_example.py
-```
-
-The result should be the same as running it on your laptop.
+Your Raspberry Pi is ready to run code!
