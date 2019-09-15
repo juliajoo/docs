@@ -217,7 +217,7 @@ void loop(void) {
 ```
 
 The complete source code is available in
-<a href="https://github.com/datacentricdesign/wheelchair-design-platform/tree/master/examples/communication/bluetooth/bno055_gatt_orientation" target="_blank">examples /
+<a href="https://github.com/datacentricdesign/docs/tree/master/examples/communication/bluetooth/bno055_gatt_orientation" target="_blank">examples /
 communication / bluetooth / bno055_gatt</a>
 
 ### 3.3 Wire and set up on the Wheel
@@ -270,9 +270,10 @@ BLUETOOTH_DEVICE_MAC=fb:48:5b:84:36:4a
 
 Then, copy the example
 
-```bash
-cp examples/communication/bluetooth/subscribe_gatt_orentation.py wheelchair/
-```
+<a href="https://github.com/datacentricdesign/docs/blob/master/examples/communication/bluetooth/subscribe_gatt_orientation.py" target="_blank">examples /
+communication / bluetooth / bno055_gatt</a>
+
+
 
 Let's have a look to this Python code. Has usual, we start by importing libraries
 and loading environment variable (note the extra one for the Bluetooth MAC address).
