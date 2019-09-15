@@ -1,13 +1,16 @@
-# Getting Started
+---
+layout: page
+title: "Getting Started"
+---
 
-## Step 1: Tools
+# Step 1: Tools
 
 Here you can find the recommended tools to get started:
 
 - [The code editors](https://datacentricdesign.github.io/docs/2019/04/30/tool-ide)
 - [Git & GitHub](https://datacentricdesign.github.io/docs/2019/09/10/tools-git)
     
-## Step 2: Data-Centric Design Hub
+# Step 2: Data-Centric Design Hub
 
 The next step is to get familiar with the DCD Hub, relying on three main concepts:
 
@@ -48,7 +51,7 @@ has:
   * a list of classes (optional): if the property type is 'CLASS', you can associate
   text to the values. This is useful when using a property as data label.
 
-## Sign Up
+# Sign Up
 
 To register, go to <a href="https://dwd.tudelft.nl/subject" target="_blank">https://dwd.tudelft.nl/subject</a>
 
@@ -81,7 +84,7 @@ description.
 your wheelchair to communicate with the hub. You can also save the thing id, but
 you can always go back to the manager to retrieve this id.
 
-## Step 3: SDK
+# Step 3: SDK
 
 From here you can continue with the SDK (Software Development Kit) of your choice:
 
