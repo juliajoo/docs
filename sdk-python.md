@@ -14,7 +14,8 @@ If your Python 3 (not Python 2) environment is ready, you can directly skip to s
 Select, download and install the latest version of Python 3 for your system
 <a href="https://www.python.org/downloads/release/python-372/" target="_blank">here</a>.
 
-__On Windows__
+<details><summary>On Windows</summary>
+<p>
 
 Once installed, go to 'Start > System > Properties > Advanced System Properties >
 Environment Variable' In User Variables, double click on 'Path'. At the end of
@@ -32,7 +33,11 @@ python --version
 
 And verifying that the correct version of python was installed.
 
-__On Mac and Linux__
+</p>
+</details>
+
+<details><summary>On Mac and Linux</summary>
+<p>
 
 After installation, open the Terminal to check if it was successful, by typing
 the following on your console:
@@ -42,6 +47,10 @@ python3 --version
 ```
 
 If the correct version of python is shown, the install was successful.
+
+</p>
+</details>
+
 
 ## Step 2: Python Dependencies
 
