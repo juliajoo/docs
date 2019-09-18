@@ -14,9 +14,7 @@ If your Python 3 (not Python 2) environment is ready, you can directly skip to s
 Select, download and install the latest version of Python 3 for your system
 <a href="https://www.python.org/downloads/release/python-372/" target="_blank">here</a>.
 
-<details><summary>On Windows</summary>
-
-<p>
+<details><summary markdown="span">On Windows</summary>
 
 Once installed, go to 'Start > System > Properties > Advanced System Properties >
 Environment Variable' In User Variables, double click on 'Path'. At the end of
@@ -34,13 +32,9 @@ python --version
 
 And verifying that the correct version of python was installed.
 
-</p>
-
 </details>
 
-<details><summary>On Mac and Linux</summary>
-
-<p>
+<details><summary markdown="span">On Mac and Linux</summary>
 
 After installation, open the Terminal to check if it was successful, by typing
 the following on your console:
@@ -50,8 +44,6 @@ python3 --version
 ```
 
 If the correct version of python is shown, the install was successful.
-
-</p>
 
 </details>
 
