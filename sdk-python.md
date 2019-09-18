@@ -15,6 +15,7 @@ Select, download and install the latest version of Python 3 for your system
 <a href="https://www.python.org/downloads/release/python-372/" target="_blank">here</a>.
 
 <details><summary>On Windows</summary>
+
 <p>
 
 Once installed, go to 'Start > System > Properties > Advanced System Properties >
@@ -34,9 +35,11 @@ python --version
 And verifying that the correct version of python was installed.
 
 </p>
+
 </details>
 
 <details><summary>On Mac and Linux</summary>
+
 <p>
 
 After installation, open the Terminal to check if it was successful, by typing
@@ -49,6 +52,7 @@ python3 --version
 If the correct version of python is shown, the install was successful.
 
 </p>
+
 </details>
 
 
