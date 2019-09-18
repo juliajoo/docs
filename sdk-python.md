@@ -14,7 +14,7 @@ If your Python 3 (not Python 2) environment is ready, you can directly skip to s
 Select, download and install the latest version of Python 3 for your system
 <a href="https://www.python.org/downloads/release/python-372/" target="_blank">here</a>.
 
-<details><summary markdown="span">On Windows</summary>
+<details><summary markdown="span">Windows</summary>
 
 Once installed, go to 'Start > System > Properties > Advanced System Properties >
 Environment Variable' In User Variables, double click on 'Path'. At the end of
@@ -34,7 +34,7 @@ And verifying that the correct version of python was installed.
 
 </details>
 
-<details><summary markdown="span">On Mac and Linux</summary>
+<details><summary markdown="span">Mac / Linux</summary>
 
 After installation, open the Terminal to check if it was successful, by typing
 the following on your console:
@@ -54,7 +54,9 @@ In the Python ecosystem, Pip is a tool that manages packages for us. We will use
 it to install and update any Python library our project relies on. You can check
 whether Pip is already install with the following command.
 
-__On Windows__, type in:
+<details><summary markdown="span">Windows</summary>
+
+Type in
 
 ```bash
 python -m pip --version
@@ -68,7 +70,12 @@ following command:
 python Downloads\get-pip.py
 ```
 
-__On Mac and Linux__, type in:
+</details>
+
+
+<details><summary markdown="span">Mac / Linux</summary>
+
+Type in
 
 ```bash
 python3 -m pip --version
@@ -80,23 +87,34 @@ If it is not found, you can install it as follows.
 python3 get-pip.py
 ```
 
+</details>
+
 ## Step 3: Python in Atom
 
 Atom is a software to edit your code, referred to as Integrated Development Environment.
 Click [here] if you need to install Atom. The next step is the Python plugin for
 Atom, to get some help specifically for Python in Atom. Go to the terminal and type:
 
-__On Mac and Linux__, type in:
+<details><summary markdown="span">Windows</summary>
+
+Type in
+
+```bash
+python -m pip install 'python-language-server[all]'
+```
+
+</details>
+
+<details><summary markdown="span">Mac / Linux</summary>
+
+Type in
 
 ```bash
 python3 -m pip install 'python-language-server[all]'
 ```
 
-__On Windows__, type in:
+</details>
 
-```bash
-python -m pip install 'python-language-server[all]'
-```
 
 When it is installed, on the top menu of Atom, click on *'Packages' >
 'Settings View' > 'Install Packages/Themes'*. Search and install 'atom-ide-ui'
@@ -125,17 +143,25 @@ This is the dependence to Python SDK of the Data-Centric Design Hub.
 
 Open the Atom terminal ('plus' sign in the bottom-left corner) and execute the following command.
 
-__On Windows__, type in:
+<details><summary markdown="span">Windows</summary>
+
+Type in
 
 ```bash
 python -m pip install -r requirements.txt --user
 ```
 
-__On Mac and Linux__, type in:
+</details>
+
+<details><summary markdown="span">Mac / Linux</summary>
+
+Type in
 
 ```bash
 pip3 install -r requirements.txt --user
 ```
+
+</details>
 
 Here we 'install' the Python dependencies for our project. The option -r indicates
 we provide a file name that contains the required dependencies, the option --user
@@ -249,17 +275,25 @@ print(my_property.to_json())
 
 Let's execute this code. Go to the Atom terminal and type in the following command:
 
-**On Windows**, type in:
+<details><summary markdown="span">Windows</summary>
+
+Type in
 
 ```bash
 python random-data.py
 ```
 
-**On Mac and Linux**, type in:
+</details>
+
+<details><summary markdown="span">Mac / Linux</summary>
+
+Type in
 
 ```bash
 python3 random-data.py
 ```
+
+</details>
 
 If the example runs properly you should see a log generated every two seconds,
 indicating dumb data is being sent to the Hub.
