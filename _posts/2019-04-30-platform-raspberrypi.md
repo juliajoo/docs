@@ -6,8 +6,6 @@ categories: Platform
 tags: Hardware RaspberryPi WiFi Bluetooth
 ---
 
-{::options parse_block_html="true" /}  # Sets parse_block_html option to true (for collapsible blocks)
-
 Some Raspberry Pi settings
 
 # Set up
@@ -44,6 +42,8 @@ root of the 'boot' disk (SD card). This file will indicate that we want to enabl
 To connect your Raspberry Pi to the network, create a second file
 'wpa_supplicant.conf' with the following content depending on the network you 
 want to connect to.
+
+{::options parse_block_html="true" /}  # Sets parse_block_html option to true (for collapsible blocks)
 
 <details><summary markdown="span">Personal Network</summary>
 
@@ -83,6 +83,8 @@ network={
 Replace YOUR_EDUROAM_NETID and YOUR_EDUROAM_PASSWORD with your netid and password.
 
 </details>
+
+{::options parse_block_html="false" /} # Sets parse_block_html option to false (for collapsible blocks)
 
 Save this file on the 'boot' partition. Make sure that its extension is .conf rather
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
@@ -225,5 +227,3 @@ python3 -m pip install -r requirements.txt --user
 ```
 
 Your Raspberry Pi is ready to run code!
-
-{::options parse_block_html="false" /} # Sets parse_block_html option to false (for collapsible blocks)
