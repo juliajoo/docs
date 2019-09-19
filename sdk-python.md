@@ -3,9 +3,7 @@ layout: page
 title: "Python SDK"
 ---
 
-{::options parse_block_html="true" /}  # Sets parse_block_html option to true (for collapsible blocks)
-
-The Python SDK facilitate the interaction with the Data-Centric Design Hub.
+The Python SDK facilitates interaction with the Data-Centric Design Hub.
 
 # Getting Started
 
@@ -17,36 +15,35 @@ Select, download and install the latest version of Python 3 for your system
 <a href="https://www.python.org/downloads/release/python-372/" target="_blank">here</a>.
 
 <details><summary markdown="span">Windows</summary>
+  Once installed, go to 'Start > System > Properties > Advanced System Properties >
+  Environment Variable' In User Variables, double click on 'Path'. At the end of
+  the line, add a semi-colon (;<zero-width space>), followed by:
 
-Once installed, go to 'Start > System > Properties > Advanced System Properties >
-Environment Variable' In User Variables, double click on 'Path'. At the end of
-the line, add a semi-colon (;<zero-width space>), followed by:
+  C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37;C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37 \Scripts
 
-C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37;C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37\Scripts
+  (Replace YOUR_USERNAME with your Windows user name)
 
-(Replace YOUR_USERNAME with your Windows user name)
+  Open the Command Prompt to check the installation, by typing in your console:
 
-Open the Command Prompt to check the installation, by typing in your console:
+  <pre><code>
+  python --version
+  </code></pre>
 
-<pre><code>
-python --version
-</code></pre>
-
-And verifying that the correct version of python was installed.
-
+  And verifying that the correct version of python was installed.
 </details>
+
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-After installation, open the Terminal to check if it was successful, by typing
-the following on your console:
+  After installation, open the Terminal to check if it was successful, by typing
+  the following on your console:
 
 
-<pre><code>
-python3 --version
-</code></pre>
+  <pre><code>
+  python3 --version
+  </code></pre>
 
-If the correct version of python is shown, the install was successful.
+  If the correct version of python is shown, the install was successful.
 
 </details>
 
@@ -59,36 +56,36 @@ whether Pip is already install with the following command.
 
 <details><summary markdown="span">Windows</summary>
 
-Type in
+  Type in
 
-<pre><code>
-python -m pip --version
-</code></pre>
+  <pre><code>
+  python -m pip --version
+  </code></pre>
 
-If it is not found, download the file <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank">get-pip.py</a>
-and save it (CMD+S or Ctrl+S) in your Downloads folder. In the Atom terminal, type in the
-following command:
+  If it is not found, download the file <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank">get-pip.py</a>
+  and save it (CMD+S or Ctrl+S) in your Downloads folder. In the Atom terminal, type in the
+  following command:
 
-<pre><code>
-python Downloads\get-pip.py
-</code></pre>
+  <pre><code>
+  python Downloads\get-pip.py
+  </code></pre>
 
 </details>
 
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-Type in
+  Type in
 
-<pre><code>
-python3 -m pip --version
-</code></pre>
+  <pre><code>
+  python3 -m pip --version
+  </code></pre>
 
-If it is not found, you can install it as follows.
+  If it is not found, you can install it as follows.
 
-<pre><code>
-python3 get-pip.py
-</code></pre>
+  <pre><code>
+  python3 get-pip.py
+  </code></pre>
 
 </details>
 
@@ -100,21 +97,21 @@ Atom, to get some help specifically for Python in Atom. Go to the terminal and t
 
 <details><summary markdown="span">Windows</summary>
 
-Type in
+  Type in
 
-<pre><code>
-python -m pip install 'python-language-server[all]'
-</code></pre>
+  <pre><code>
+  python -m pip install 'python-language-server[all]'
+  </code></pre>
 
 </details>
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-Type in
+  Type in
 
-<pre><code>
-python3 -m pip install 'python-language-server[all]'
-</code></pre>
+  <pre><code>
+  python3 -m pip install 'python-language-server[all]'
+  </code></pre>
 
 </details>
 
@@ -148,21 +145,21 @@ Open the Atom terminal ('plus' sign in the bottom-left corner) and execute the f
 
 <details><summary markdown="span">Windows</summary>
 
-Type in
+  Type in
 
-<pre><code>
-python -m pip install -r requirements.txt --user
-</code></pre>
+  <pre><code>
+  python -m pip install -r requirements.txt --user
+  </code></pre>
 
 </details>
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-Type in
+  Type in
 
-<pre><code>
-pip3 install -r requirements.txt --user
-</code></pre>
+  <pre><code>
+  pip3 install -r requirements.txt --user
+  </code></pre>
 
 </details>
 
