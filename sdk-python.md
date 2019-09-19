@@ -28,9 +28,9 @@ C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37;C:\Users\YOUR_USER
 
 Open the Command Prompt to check the installation, by typing in your console:
 
-```bash
+<pre><code>
 python --version
-```
+</code></pre>
 
 And verifying that the correct version of python was installed.
 
@@ -41,9 +41,10 @@ And verifying that the correct version of python was installed.
 After installation, open the Terminal to check if it was successful, by typing
 the following on your console:
 
-```bash
+
+<pre><code>
 python3 --version
-```
+</code></pre>
 
 If the correct version of python is shown, the install was successful.
 
@@ -60,17 +61,17 @@ whether Pip is already install with the following command.
 
 Type in
 
-```bash
+<pre><code>
 python -m pip --version
-```
+</code></pre>
 
 If it is not found, download the file <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank">get-pip.py</a>
 and save it (CMD+S or Ctrl+S) in your Downloads folder. In the Atom terminal, type in the
 following command:
 
-```bash
+<pre><code>
 python Downloads\get-pip.py
-```
+</code></pre>
 
 </details>
 
@@ -79,15 +80,15 @@ python Downloads\get-pip.py
 
 Type in
 
-```bash
+<pre><code>
 python3 -m pip --version
-```
+</code></pre>
 
 If it is not found, you can install it as follows.
 
-```bash
+<pre><code>
 python3 get-pip.py
-```
+</code></pre>
 
 </details>
 
@@ -101,9 +102,9 @@ Atom, to get some help specifically for Python in Atom. Go to the terminal and t
 
 Type in
 
-```bash
+<pre><code>
 python -m pip install 'python-language-server[all]'
-```
+</code></pre>
 
 </details>
 
@@ -111,9 +112,9 @@ python -m pip install 'python-language-server[all]'
 
 Type in
 
-```bash
+<pre><code>
 python3 -m pip install 'python-language-server[all]'
-```
+</code></pre>
 
 </details>
 
@@ -149,9 +150,9 @@ Open the Atom terminal ('plus' sign in the bottom-left corner) and execute the f
 
 Type in
 
-```bash
+<pre><code>
 python -m pip install -r requirements.txt --user
-```
+</code></pre>
 
 </details>
 
@@ -159,9 +160,9 @@ python -m pip install -r requirements.txt --user
 
 Type in
 
-```bash
+<pre><code>
 pip3 install -r requirements.txt --user
-```
+</code></pre>
 
 </details>
 
@@ -281,9 +282,9 @@ Let's execute this code. Go to the Atom terminal and type in the following comma
 
 Type in
 
-```bash
+<pre><code>
 python random-data.py
-```
+</code></pre>
 
 </details>
 
@@ -291,9 +292,9 @@ python random-data.py
 
 Type in
 
-```bash
+<pre><code>
 python3 random-data.py
-```
+</code></pre>
 
 </details>
 

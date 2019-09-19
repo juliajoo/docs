@@ -76,11 +76,13 @@ network={
   identity="YOUR_EDUROAM_NETID"
   password="YOUR_EDUROAM_PASSWORD"
 }
-<pre><code>
+
+</code></pre>
 
 <p>
 Replace YOUR_EDUROAM_NETID and YOUR_EDUROAM_PASSWORD with your netid and password.
 </p>
+
 </details>
 
 Save this file on the 'boot' partition. Make sure that its extension is .conf rather
