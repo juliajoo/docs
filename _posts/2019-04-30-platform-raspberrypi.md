@@ -43,11 +43,9 @@ To connect your Raspberry Pi to the network, create a second file
 'wpa_supplicant.conf' with the following content depending on the network you 
 want to connect to.
 
-{::options parse_block_html="true" /}  # Sets parse_block_html option to true (for collapsible blocks)
-
 <details><summary markdown="span">Personal Network</summary>
 
-```bash
+<pre><code>
 country=NL
 update_config=1
 ctrl_interface=/var/run/wpa_supplicant
@@ -57,14 +55,14 @@ network={
   psk="YOUR_NETORK_PASSWORD"
 }
 
-```
+</code></pre>
 
 </details>
 
 
 <details><summary markdown="span">Eduroam</summary>
 
-```bash
+<pre><code>
 country=NL
 update_config=1
 ctrl_interface=/var/run/wpa_supplicant
@@ -78,13 +76,12 @@ network={
   identity="YOUR_EDUROAM_NETID"
   password="YOUR_EDUROAM_PASSWORD"
 }
-```
+<pre><code>
 
+<p>
 Replace YOUR_EDUROAM_NETID and YOUR_EDUROAM_PASSWORD with your netid and password.
-
+</p>
 </details>
-
-{::options parse_block_html="false" /} # Sets parse_block_html option to false (for collapsible blocks)
 
 Save this file on the 'boot' partition. Make sure that its extension is .conf rather
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
