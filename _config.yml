@@ -45,5 +45,3 @@ exclude:
 sass:
   style: compressed
 future: true
-kramdown:
-  parse_block_html: true

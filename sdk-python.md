@@ -3,6 +3,8 @@ layout: page
 title: "Python SDK"
 ---
 
+{::options parse_block_html="true" /}  # Sets parse_block_html option to true (for collapsible blocks)
+
 The Python SDK facilitate the interaction with the Data-Centric Design Hub.
 
 # Getting Started
@@ -343,3 +345,6 @@ You can execute the Python script again and check incoming data with
 [DCD data subject](/docs/2019/07/31/tool-data-subject).
 
 Back in the Atom terminal, stop your Python script with CMD+C (Ctrl+C).
+
+
+{::options parse_block_html="false" /} # Sets parse_block_html option to false (for collapsible blocks)
