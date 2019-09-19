@@ -6,6 +6,8 @@ categories: Platform
 tags: Hardware RaspberryPi WiFi Bluetooth
 ---
 
+{::options parse_block_html="true" /}  # Sets parse_block_html option to true (for collapsible blocks)
+
 Some Raspberry Pi settings
 
 # Set up
@@ -18,11 +20,11 @@ Insert the SD card in your laptop.
 
 Download and install the software
 
-Get the latest Raspbian here: https://www.raspberrypi.org/downloads/raspbian/
+Get the latest Raspbian here: [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 
 Unzip the file, you obtain an image file (extension .img)
 
-To install this image on the SD card, download and install Etcher: https://www.balena.io/etcher/
+To install this image on the SD card, download and install Etcher: [Etcher](https://www.balena.io/etcher/)
 
 Starting Etcher, you first select your image file, then your SD card, and 'Flash'.
 
@@ -40,7 +42,10 @@ root of the 'boot' disk (SD card). This file will indicate that we want to enabl
 ## 5.2.2 Network Access
 
 To connect your Raspberry Pi to the network, create a second file
-'wpa_supplicant.conf' with the following content:
+'wpa_supplicant.conf' with the following content depending on the network you 
+want to connect to.
+
+<details><summary markdown="span">Personal Network</summary>
 
 ```bash
 country=NL
@@ -54,13 +59,16 @@ network={
 
 ```
 
-Save this file on the 'boot' partition. Make sure that its extension is .conf rather
-than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
-double-check that your file is not recognised as a text document).
+</details>
 
-To connect to Eduroam:
+
+<details><summary markdown="span">Eduroam</summary>
 
 ```bash
+country=NL
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+
 network={
   scan_ssid=0
   ssid="eduroam"
@@ -71,6 +79,14 @@ network={
   password="YOUR_EDUROAM_PASSWORD"
 }
 ```
+
+Replace YOUR_EDUROAM_NETID and YOUR_EDUROAM_PASSWORD with your netid and password.
+
+</details>
+
+Save this file on the 'boot' partition. Make sure that its extension is .conf rather
+than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
+double-check that your file is not recognised as a text document).
 
 **Disclaimer**: this process requires to insert the Eduroam password. Thus, it is
 important to protect the access to your Raspberry Pi. Make sure you apply ALL the
@@ -209,3 +225,5 @@ python3 -m pip install -r requirements.txt --user
 ```
 
 Your Raspberry Pi is ready to run code!
+
+{::options parse_block_html="false" /} # Sets parse_block_html option to false (for collapsible blocks)
