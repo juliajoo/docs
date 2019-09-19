@@ -14,7 +14,7 @@ If your Python 3 (not Python 2) environment is ready, you can directly skip to s
 Select, download and install the latest version of Python 3 for your system
 <a href="https://www.python.org/downloads/release/python-372/" target="_blank">here</a>.
 
-<details><summary markdown="span">>Windows</summary>
+<details><summary markdown="span">Windows</summary>
   Once installed, go to 'Start > System > Properties > Advanced System Properties >
   Environment Variable' In User Variables, double click on 'Path'. At the end of
   the line, add a semi-colon (;<zero-width space>), followed by:
