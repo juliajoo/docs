@@ -17,13 +17,15 @@ Select, download and install the latest version of Python 3 for your system
 <details><summary markdown="span">Windows</summary>
   Once installed, go to 'Start > System > Properties > Advanced System Properties >
   Environment Variable' In User Variables, double click on 'Path'. At the end of
-  the line, add a semi-colon (;[zero-width space]), followed by:
+  the line, add a semi-colon <b>;</b> (without space), followed by:
 
+  <pre><code>
   C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37;C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37 \Scripts
+  </code></pre>
 
-  (Replace YOUR_USERNAME with your Windows user name)
+  <p>(Replace YOUR_USERNAME with your Windows user name)</p>
 
-  Open the Command Prompt to check the installation, by typing in your console:
+  <p>Open the Command Prompt to check the installation, by typing in your console:</p>
 
   <pre><code>
   python --version
@@ -56,7 +58,7 @@ whether Pip is already install with the following command.
 
 <details><summary markdown="span">Windows</summary>
 
-  Type in
+  Type in:
 
   <pre><code>
   python -m pip --version
@@ -75,7 +77,7 @@ whether Pip is already install with the following command.
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-  Type in
+  Type in:
 
   <pre><code>
   python3 -m pip --version
@@ -97,7 +99,7 @@ Atom, to get some help specifically for Python in Atom. Go to the terminal and t
 
 <details><summary markdown="span">Windows</summary>
 
-  Type in
+  Type in:
 
   <pre><code>
   python -m pip install 'python-language-server[all]'
@@ -107,7 +109,7 @@ Atom, to get some help specifically for Python in Atom. Go to the terminal and t
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-  Type in
+  Type in:
 
   <pre><code>
   python3 -m pip install 'python-language-server[all]'
@@ -145,7 +147,7 @@ Open the Atom terminal ('plus' sign in the bottom-left corner) and execute the f
 
 <details><summary markdown="span">Windows</summary>
 
-  Type in
+  Type in:
 
   <pre><code>
   python -m pip install -r requirements.txt --user
@@ -155,7 +157,7 @@ Open the Atom terminal ('plus' sign in the bottom-left corner) and execute the f
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-  Type in
+  Type in:
 
   <pre><code>
   pip3 install -r requirements.txt --user
@@ -277,7 +279,7 @@ Let's execute this code. Go to the Atom terminal and type in the following comma
 
 <details><summary markdown="span">Windows</summary>
 
-Type in
+Type in:
 
 <pre><code>
 python random-data.py
@@ -287,7 +289,7 @@ python random-data.py
 
 <details><summary markdown="span">Mac / Linux</summary>
 
-Type in
+Type in:
 
 <pre><code>
 python3 random-data.py
