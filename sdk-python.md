@@ -17,7 +17,7 @@ Select, download and install the latest version of Python 3 for your system
 <details><summary markdown="span">Windows</summary>
   Once installed, go to 'Start > System > Properties > Advanced System Properties >
   Environment Variable' In User Variables, double click on 'Path'. At the end of
-  the line, add a semi-colon (;<zero-width space>), followed by:
+  the line, add a semi-colon (;[zero-width space]), followed by:
 
   C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37;C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python37 \Scripts
 
@@ -343,6 +343,3 @@ You can execute the Python script again and check incoming data with
 [DCD data subject](/docs/2019/07/31/tool-data-subject).
 
 Back in the Atom terminal, stop your Python script with CMD+C (Ctrl+C).
-
-
-{::options parse_block_html="false" /} # Sets parse_block_html option to false (for collapsible blocks)
