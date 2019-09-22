@@ -133,7 +133,7 @@ Save this file on the 'boot' partition. Make sure that its extension is .conf ra
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
 double-check that your file is not recognised as a text document).
 
-**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service here. The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the script to send IP of your device to the hub, 
+**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the script to send IP of your device to the hub, 
 
 <details><summary markdown="span">eduroam.service/summary>
 	
