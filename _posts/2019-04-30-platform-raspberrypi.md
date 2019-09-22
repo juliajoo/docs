@@ -133,30 +133,56 @@ Save this file on the 'boot' partition. Make sure that its extension is .conf ra
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
 double-check that your file is not recognised as a text document).
 
-**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the script to send IP of your device to the hub, 
+**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). 
 
+First create a Scripts folder in your pi, then create a script (with execution permissions) called eduroam.sh:
+```bash
+mkdir Scripts 
+cd Scripts 
+touch eduroam.sh
+sudo chmod +x eduroam.sh
+sudo nano eduroam.sh
+```
+<details><summary markdown="span">eduroam.sh/summary>
+
+<pre><code>
+#!/bin/bash
+
+sudo rm -rf /var/run/wpa_supplicant/wlan0
+sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext 	
+</code></pre>
+
+</details> 
+
+The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the script to send IP of your device to the hub, 
 <details><summary markdown="span">eduroam.service/summary>
 	
 
 <pre><code>
 [Unit]
 Description=Connect to eduroam automatically using older driver
-After=network.target # runs after network is set up
- 
+After=network.target
+
 [Service]
-# establish connection 
-ExecStart=/bin/bash sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext 
-ExecStartPost=/usr/bin/python3	/home/YOUR_PI_USERNAME/REST_OF_PATH/ip.py	# call IP script
-StandardOutput=inherit
-StandardError=inherit
-Restart=always	# always restart this process
+
+ExecStart=/bin/bash /home/YOUR_PI_USERNAME/Scripts/eduroam.sh
+ExecStartPost=/usr/bin/python3	/home/YOUR_PI_USERNAME/REST_OF_PATH/ip.py	
+StandardOutput=syslog 
+StandardError=syslog 
+Restart=always
+RestartSec=10
+User=root
+Group=root 
 
 [Install]
 WantedBy=multi-user.target
 
 </code></pre>
 
-
+Notes :
+ # runs after network isp
+ # establish connection 
+ # always restart this process
 </details>  
 
 
