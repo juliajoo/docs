@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Raspberry Pi"
-date:   2019-04-30 01:30:13 +0000
+date:   2019-04-30 16:00:00 +0000
 categories: Platform
-tags: Hardware RaspberryPi WiFi Bluetooth
+tags: Hardware RaspberryPi 
 ---
 
-Some Raspberry Pi settings
+Some Raspberry Pi settings.
 
 # Set up
 
@@ -41,7 +41,44 @@ root of the 'boot' disk (SD card). This file will indicate that we want to enabl
 
 To connect your Raspberry Pi to the network, create a second file
 'wpa_supplicant.conf' with the following content depending on the network you 
-want to connect to.
+want to connect to, but first, you should create a hash of your network password
+so it isn't in plaintext in the supplicant file:
+
+### 5.2.2.1 Hash Password
+
+
+
+<details><summary markdown="span">MacOS</summary>
+
+
+Open your system terminal (not atom), and type the following:
+
+<pre><code>
+	echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE | openssl md4
+</code></pre>
+
+Copy the hashed password, so you can use in your supplicant file. 
+
+</details>
+
+
+<details><summary markdown="span">Windows</summary>
+
+Open git bash (search for it in the startup menu), and type the following to receive the hash of your password:
+
+
+</code></pre>
+	echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE  | openssl md4
+</code></pre>
+
+Copy the hashed password, so you can use in your supplicant file. 
+
+</details>
+
+
+### 5.2.2.2 Set up Supplicant File
+
+The supplicant file setup is different between a normal network, and an enterprise one (such as eduroam)
 
 <details><summary markdown="span">Personal Network</summary>
 
@@ -52,7 +89,7 @@ ctrl_interface=/var/run/wpa_supplicant
 
 network={
   ssid="YOUR_NETWORK_SSID"
-  psk="YOUR_NETORK_PASSWORD"
+  psk=hash:YOUR_HASHED_NETWORK_PASSWORD
 }
 
 </code></pre>
@@ -61,40 +98,82 @@ network={
 
 
 <details><summary markdown="span">Eduroam</summary>
+	
 
 <pre><code>
 country=NL
 update_config=1
-ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 
 network={
-  scan_ssid=0
-  ssid="eduroam"
-  key_mgmt=WPA-EAP
-  eap=PEAP
-  phase2="MSCHAPV2"
-  identity="YOUR_EDUROAM_NETID"
-  password="YOUR_EDUROAM_PASSWORD"
+       ssid="eduroam"
+       priority=10
+       proto=WPA RSN
+       key_mgmt=WPA-EAP
+       pairwise=CCMP TKIP
+       auth_alg=OPEN
+       eap=PEAP
+       anonymous_identity="anonymous@student.tudelf.nl"
+       phase1="peaplabel=0"
+       phase2="auth=MSCHAPV2"
+       identity="YOUR_EDUROAM_NETID@student.tudelft.nl"
+       password=hash:YOUR_HASHED_EDUROAM_PASSWORD
 }
 
 </code></pre>
 
 <p>
-Replace YOUR_EDUROAM_NETID and YOUR_EDUROAM_PASSWORD with your netid and password.
+Replace YOUR_EDUROAM_NETID and YOUR_HASHED_EDUROAM_PASSWORD with your netid and hashed password.
 </p>
 
 </details>
+
 
 Save this file on the 'boot' partition. Make sure that its extension is .conf rather
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
 double-check that your file is not recognised as a text document).
 
-**Disclaimer**: this process requires to insert the Eduroam password. Thus, it is
+**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service here. The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the script to send IP of your device to the hub, 
+
+<details><summary markdown="span">eduroam.service/summary>
+	
+
+<pre><code>
+[Unit]
+Description=Connect to eduroam automatically using older driver
+After=network.target # runs after network is set up
+ 
+[Service]
+# establish connection 
+ExecStart=/bin/bash sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext 
+ExecStartPost=/usr/bin/python3	/home/YOUR_PI_USERNAME/REST_OF_PATH/ip.py	# call IP script
+StandardOutput=inherit
+StandardError=inherit
+Restart=always	# always restart this process
+
+[Install]
+WantedBy=multi-user.target
+
+</code></pre>
+
+
+</details>  
+
+
+
+
+
+**Disclaimer 2**: this process requires to insert the Eduroam password. Thus, it is
 important to protect the access to your Raspberry Pi. Make sure you apply ALL the
 following steps marked as **SECURITY**
 
 **SECURITY** Disable auto-login: by default, anyone with an HDMI cable can look at
-your Raspberry Pi and its files. Disable this feature
+your Raspberry Pi and its files. Disable this feature by going on your raspberry terminal menu (on your ssh session or directly in the pi):  
+
+```bash
+sudo raspi-config 
+```
+
 
 ### 5.3 Booting and Connecting
 
