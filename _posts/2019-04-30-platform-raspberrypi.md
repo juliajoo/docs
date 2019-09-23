@@ -51,11 +51,10 @@ so it isn't in plaintext in the supplicant file:
 
 <details><summary markdown="span">MacOS</summary>
 
-
 Open your system terminal (not atom), and type the following:
 
 <pre><code>
-	echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE | openssl md4
+echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE | openssl md4
 </code></pre>
 
 Copy the hashed password, so you can use in your supplicant file. 
@@ -109,13 +108,8 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 
 network={
        ssid="eduroam"
-       priority=10
-       proto=WPA RSN
        key_mgmt=WPA-EAP
-       pairwise=CCMP TKIP
-       auth_alg=OPEN
        eap=PEAP
-       anonymous_identity="anonymous@tudelft.nl"
        phase1="peaplabel=0"
        phase2="auth=MSCHAPV2"
        identity="YOUR_EDUROAM_NETID@tudelft.nl"
