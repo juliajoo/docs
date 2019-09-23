@@ -10,6 +10,13 @@ tags:  RaspberryPi Raspbian
 
 Raspbian is a linux based computer operating system for the Raspberry Pi. 
 
+## Command Line
+The command line is the main way we will be interacting with the Pi, so its
+convenient to know some commands to get around it. Here are some helpful links:
+* [Terminal Cheatsheet](https://www.thehackr.com/linux-terminal-cheat-sheet/)
+* [Linux Command line](https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/)
+* [UNIX Reference](https://files.fosswire.com/2007/08/fwunixref.pdf)
+
 
 ## Running Code on Startup 
 A useful workflow for the pi, is to run some particular code always on startup.
