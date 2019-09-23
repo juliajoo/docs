@@ -149,7 +149,7 @@ sudo nano eduroam.sh
 <pre><code>
 #!/bin/bash
 
-sudo rm -rf /var/run/wpa_supplicant/wlan0
+sudo killall wpa_supplicant
 sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext 	
 </code></pre>
 
