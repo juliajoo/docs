@@ -41,7 +41,7 @@ root of the 'boot' disk (SD card). This file will indicate that we want to enabl
 
 To connect your Raspberry Pi to the network, you need to connect to your pi to a screen
 and keyborad. Start by creating a second file
-'wpa_supplicant.conf' with the following content depending on the network you 
+'wpa_supplicant.conf'  (in atom) with the following content depending on the network you 
 want to connect to, but first, you should create a hash of your network password
 so it isn't in plaintext in the supplicant file:
 
@@ -135,7 +135,7 @@ Save this file on the 'boot' partition. Make sure that its extension is .conf ra
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
 double-check that your file is not recognised as a text document).
 
-**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). 
+**Disclaimer 1**: For eduroam, the setup process doesn't end there, 
 
 In the terminal of the raspberry pi (using a screen and a keyboard), 
 first create a Scripts folder in your home pi directory 
@@ -179,7 +179,7 @@ sudo ./eduroam.sh
 ```
 
 And your network should be connected. 
-To make this script run every time the pi boots up, We must configure a service.
+To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). 
 
 The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
 <details><summary markdown="span">eduroam.service</summary>
