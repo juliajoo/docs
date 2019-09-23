@@ -67,7 +67,7 @@ Copy the hashed password, so you can use in your supplicant file.
 Open git bash (search for it in the startup menu), and type the following to receive the hash of your password:
 
 
-</code></pre>
+<pre><code>
 	echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE  | openssl md4
 </code></pre>
 
@@ -98,7 +98,8 @@ network={
 
 
 <details><summary markdown="span">Eduroam</summary>
-	
+First, you must hash your password. You do this so you don't have the
+plaintext in your pi when you configure the password
 
 <pre><code>
 country=NL
