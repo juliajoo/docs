@@ -177,7 +177,7 @@ sudo ./eduroam.sh
 ```
 
 And your network should be connected. 
-To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here](}). 
+To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here](https://datacentricdesign.github.io/docs/2019/09/20/platform-raspbian). 
 
 The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
 <details><summary markdown="span">eduroam.service</summary>
