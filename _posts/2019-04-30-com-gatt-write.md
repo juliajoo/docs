@@ -8,7 +8,7 @@ tags: Wheelchair Bluetooth GATT Feather
 
 In this tutorial we lead you step-by-step to implement a Bluetooth GATT service.
 
-At the end of tutorial '[GATT Notify](com-gatt-notify.md)', we were able to register to a BLE GATT service on the
+At the end of tutorial '[GATT Notify](/docs/2019/04/30/com-gatt-notify.md)', we were able to register to a BLE GATT service on the
 Feather 32u4 placed on the left wheel of the wheelchair to receive orientation
 and rotation data. In this step, we explore how we can use this information to
 reason on the Raspberry Pi, and trigger action on the Arduino Mega.
@@ -18,7 +18,7 @@ reason on the Raspberry Pi, and trigger action on the Arduino Mega.
 # 1 Vibration pattern
 
 Let's start with a look at the vibration motor describe here:
-[Vibration Motor](actuators-vibration_motors.md)
+[Vibration Motor](/docs/2019/04/30/actuators-vibration_motors.md)
 
 Building on the couple of examples we provide, write your own vibration pattern.
 

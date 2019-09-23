@@ -20,7 +20,7 @@ depending on the internet status.
 
 The first step is to explore how to wire and control a NeoPixel 5mm Diffused LED.
 This is described in the LED page in section 3:
-[/resources/actuators/leds](/2019/04/30/actuators-leds.md#3-neopixel-5mm-diffused-led)
+[/resources/actuators/leds](/docs/2019/04/30/actuators-leds.md#3-neopixel-5mm-diffused-led)
 
 # 2 Internet Connection status
 
