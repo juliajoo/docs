@@ -136,7 +136,10 @@ double-check that your file is not recognised as a text document).
 
 **Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). 
 
-First create a Scripts folder in your pi, then create a script (with execution permissions) called eduroam.sh:
+In the terminal, first create a Scripts folder in your pi (mkdir, for 'make directory'),
+then create a script (with execution 
+permissions) called eduroam.sh:
+
 ```bash
 mkdir Scripts 
 cd Scripts 
@@ -157,7 +160,7 @@ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext
 
 
 The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
-<details><summary markdown="span">eduroam.service/summary>
+<details><summary markdown="span">eduroam.service</summary>
 
 	
 
