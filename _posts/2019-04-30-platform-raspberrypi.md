@@ -39,8 +39,9 @@ root of the 'boot' disk (SD card). This file will indicate that we want to enabl
 
 ## 5.2.2 Network Access
 
-To connect your Raspberry Pi to the network, create a second file
-'wpa_supplicant.conf' with the following content depending on the network you 
+To connect your Raspberry Pi to the network, you need to connect to your pi to a screen
+and keyborad. Start by creating a second file
+'wpa_supplicant.conf'  (in atom) with the following content depending on the network you 
 want to connect to, but first, you should create a hash of your network password
 so it isn't in plaintext in the supplicant file:
 
@@ -50,11 +51,10 @@ so it isn't in plaintext in the supplicant file:
 
 <details><summary markdown="span">MacOS</summary>
 
-
 Open your system terminal (not atom), and type the following:
 
 <pre><code>
-	echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE | openssl md4
+echo -n 'YOUR_NETWORK_PASSWORD' | iconv -t UTF-16LE | openssl md4
 </code></pre>
 
 Copy the hashed password, so you can use in your supplicant file. 
@@ -114,10 +114,9 @@ network={
        pairwise=CCMP TKIP
        auth_alg=OPEN
        eap=PEAP
-       anonymous_identity="anonymous@student.tudelf.nl"
        phase1="peaplabel=0"
        phase2="auth=MSCHAPV2"
-       identity="YOUR_EDUROAM_NETID@student.tudelft.nl"
+       identity="YOUR_EDUROAM_NETID@tudelft.nl"
        password=hash:YOUR_HASHED_EDUROAM_PASSWORD
 }
 
@@ -134,19 +133,31 @@ Save this file on the 'boot' partition. Make sure that its extension is .conf ra
 than .conf.txt (most texts editor will automatically add .txt or .rtf and hide it,
 double-check that your file is not recognised as a text document).
 
-**Disclaimer 1**: For eduroam, the setup process doesn't end there, you must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). 
+**Disclaimer 1**: For eduroam, the setup process doesn't end there, 
 
-In the terminal, first create a Scripts folder in your pi (mkdir, for 'make directory'),
-then create a script (with execution 
-permissions) called eduroam.sh:
+In the terminal of the raspberry pi (using a screen and a keyboard), 
+first create a Scripts folder in your home pi directory 
+(mkdir command, for 'make directory'), and enter this folder (cd command),:
 
 ```bash
 mkdir Scripts 
-cd Scripts 
+cd Scripts
+```
+
+Then, create a script named eduroam.sh (touch command)
+and give the file you created execution permission (chmod command):
+
+```bash
 touch eduroam.sh
 sudo chmod +x eduroam.sh
-sudo nano eduroam.sh
 ```
+
+Finally, open this file (using the nano command): 
+```bash
+sudo nano eduroam.sh
+``` 
+
+and add the following text to it:
 <details><summary markdown="span">eduroam.sh</summary>
 
 <pre><code>
@@ -158,6 +169,15 @@ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext
 
 </details> 
 
+Once that is done, save this file ( CTRL + O ), and exit nano (CTRL + X)
+Now run this script by running the following command 
+
+``` bash 
+sudo ./eduroam.sh
+```
+
+And your network should be connected. 
+To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here](https://datacentricdesign.github.io/docs/2019/09/20/platform-raspbian). 
 
 The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
 <details><summary markdown="span">eduroam.service</summary>
@@ -172,13 +192,11 @@ After=network.target
 [Service]
 
 ExecStart=/bin/bash /home/YOUR_PI_USERNAME/Scripts/eduroam.sh
-ExecStartPost=/usr/bin/python3	/home/YOUR_PI_USERNAME/REST_OF_PATH/ip.py	
 StandardOutput=syslog 
 StandardError=syslog 
 Restart=always
 RestartSec=10
-User=root
-Group=root 
+User=pi
 
 [Install]
 WantedBy=multi-user.target
