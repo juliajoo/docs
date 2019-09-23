@@ -19,7 +19,7 @@ orientation sensor and set it up on a wheel as a Bluetooth service.
 
 To get started with this second tutorial, we propose to experience the principles
  and the capabilities of an orientation sensors. Go through the explanation and
- the examples we compiled for the BNO055: [Orientation Sensor](orientation.md)
+ the examples we compiled for the BNO055: [Orientation Sensor](/docs/2019/04/30/sensors-orientation)
 
 ## 2 Feather Bluefruit
 
@@ -40,7 +40,7 @@ to the cloud, offering more flexibility.
 
 On the wheel, we propose to implement the Feather 32u4, an Arduino-like, Bluetooth
 enabled board by AdaFruit. Have a look at the documentation we compiled to get
-an overview of its capabilities and set up your Arduino IDE: [Feather 32u4](feather.md)
+an overview of its capabilities and set up your Arduino IDE: [Feather 32u4](/docs/2019/04/30/platform-feather)
 
 For this you will also have to install the following library (Bluefruit nRF51), which you can do in Sketch -> Include Library -> Manage Libraries :
 
@@ -274,7 +274,6 @@ Then, copy the example
 communication / bluetooth / bno055_gatt</a>
 
 
-
 Let's have a look to this Python code. Has usual, we start by importing libraries
 and loading environment variable (note the extra one for the Bluetooth MAC address).
 
@@ -321,3 +320,6 @@ left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
 
 To go further, you can have a look at the second example orientation_rotation which
 show an example of a service with two characteristics.
+
+<a href="https://github.com/datacentricdesign/docs/tree/master/examples/communication/bluetooth/bno055_gatt_orientation_rotation" target="_blank">examples /
+communication / bluetooth / bno055_gatt</a>

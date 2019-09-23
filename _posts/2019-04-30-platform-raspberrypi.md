@@ -143,7 +143,7 @@ touch eduroam.sh
 sudo chmod +x eduroam.sh
 sudo nano eduroam.sh
 ```
-<details><summary markdown="span">eduroam.sh/summary>
+<details><summary markdown="span">eduroam.sh</summary>
 
 <pre><code>
 #!/bin/bash
@@ -154,8 +154,10 @@ sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf -Dwext
 
 </details> 
 
+
 The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
 <details><summary markdown="span">eduroam.service/summary>
+
 	
 
 <pre><code>
