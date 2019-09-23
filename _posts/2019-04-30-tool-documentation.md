@@ -23,6 +23,6 @@ milestones your project. <a href="https://keepachangelog.com/en/1.0.0/" target="
 Some guidances about Change logs here.</a>
 
 * Nice looking website out of your markdown with 
-<a href="https://keepachangelog.com/en/1.0.0/" target="_blank">GitHub Pages</a>.
+<a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 For example, this website has been automatically generated from the
 wheelchair-design-platform repository.
