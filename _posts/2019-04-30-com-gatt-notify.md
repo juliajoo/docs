@@ -42,7 +42,7 @@ On the wheel, we propose to implement the Feather 32u4, an Arduino-like, Bluetoo
 enabled board by AdaFruit. Have a look at the documentation we compiled to get
 an overview of its capabilities and set up your Arduino IDE: [Feather 32u4](/docs/2019/04/30/platform-feather)
 
-For this you will also have to install the following library (Bluefruit nRF51), which you can do in Sketch -> Include Library -> Manage Libraries :
+For this you will also have to install the following libraries: Bluefruit nRF51, and Adafruit Unified Sensor,  which you can do in Sketch -> Include Library -> Manage Libraries:
 
 ![](/docs/assets/res/library.png)
 
@@ -268,8 +268,7 @@ Copy the MAC address and paste in your .env file as a new environment variable
 BLUETOOTH_DEVICE_MAC=fb:48:5b:84:36:4a
 ```
 
-Then, copy the example
-
+Then, copy the following example to your project python scripts folder
 <a href="https://github.com/datacentricdesign/docs/blob/master/examples/communication/bluetooth/subscribe_gatt_orientation.py" target="_blank">examples /
 communication / bluetooth / bno055_gatt</a>
 

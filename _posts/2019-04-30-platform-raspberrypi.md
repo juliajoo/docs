@@ -204,10 +204,13 @@ WantedBy=multi-user.target
 
 </code></pre>
 
-Notes :
- # runs after network isp
- # establish connection 
- # always restart this process
+<p>
+Notes:
+ # runs after network scaffolding is ready
+ # establishes connection using eduroam.sh
+ # always restart this process in case of breakdown
+</p>
+
 </details>  
 
 
