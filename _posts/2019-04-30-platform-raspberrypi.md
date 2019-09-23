@@ -108,7 +108,11 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 
 network={
        ssid="eduroam"
+       priority=10
+       proto=WPA RSN
        key_mgmt=WPA-EAP
+       pairwise=CCMP TKIP
+       auth_alg=OPEN
        eap=PEAP
        phase1="peaplabel=0"
        phase2="auth=MSCHAPV2"
@@ -173,7 +177,7 @@ sudo ./eduroam.sh
 ```
 
 And your network should be connected. 
-To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here]({% post_url 2019-09-20-platform-raspbian %}). 
+To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here](}). 
 
 The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
 <details><summary markdown="span">eduroam.service</summary>
@@ -188,13 +192,11 @@ After=network.target
 [Service]
 
 ExecStart=/bin/bash /home/YOUR_PI_USERNAME/Scripts/eduroam.sh
-ExecStartPost=/usr/bin/python3	/home/YOUR_PI_USERNAME/REST_OF_PATH/ip.py	
 StandardOutput=syslog 
 StandardError=syslog 
 Restart=always
 RestartSec=10
-User=root
-Group=root 
+User=pi
 
 [Install]
 WantedBy=multi-user.target
