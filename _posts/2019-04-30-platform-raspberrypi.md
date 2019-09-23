@@ -115,10 +115,10 @@ network={
        pairwise=CCMP TKIP
        auth_alg=OPEN
        eap=PEAP
-       anonymous_identity="anonymous@student.tudelft.nl"
+       anonymous_identity="anonymous@tudelft.nl"
        phase1="peaplabel=0"
        phase2="auth=MSCHAPV2"
-       identity="YOUR_EDUROAM_NETID@student.tudelft.nl"
+       identity="YOUR_EDUROAM_NETID@tudelft.nl"
        password=hash:YOUR_HASHED_EDUROAM_PASSWORD
 }
 
