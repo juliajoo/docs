@@ -98,8 +98,11 @@ network={
 
 
 <details><summary markdown="span">Eduroam</summary>
+
+<p>
 First, you must hash your password. You do this so you don't have the
 plaintext in your pi when you configure the password
+</p>
 
 <pre><code>
 country=NL
