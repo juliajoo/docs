@@ -8,9 +8,10 @@ tags: Wheelchair Bluetooth GATT Feather
 
 In this tutorial we lead you step-by-step to implement a Bluetooth GATT service.
 
-At the end of tutorial '[GATT Notify](/docs/2019/04/30/com-gatt-notify.md)', we were able to register to a BLE GATT service on the
-Feather 32u4 placed on the left wheel of the wheelchair to receive orientation
-and rotation data. In this step, we explore how we can use this information to
+At the end of tutorial '[GATT Notify](/docs/2019/04/30/com-gatt-notify.md)',
+we were able to register to a BLE GATT service on the Feather 32u4 placed on the
+left wheel of the wheelchair to receive orientation and rotation data. In this
+step, we explore how we can use this information to
 reason on the Raspberry Pi, and trigger action on the Arduino Mega.
 
 ![](/docs/assets/res/ws3-1.png)
@@ -22,7 +23,7 @@ Let's start with a look at the vibration motor describe here:
 
 Building on the couple of examples we provide, write your own vibration pattern.
 
-# 1 Vibration Function
+# 2 Vibration Function
 
 The next step is to transform this continuous pattern into a function that we
 can turn on and off on demand. Thus, we create a function vibration_pattern() and
@@ -52,7 +53,7 @@ void loop() {
 ```
 
 
-# 1 Writing over Serial
+# 3 Writing over Serial
 
 Now that we have a function, we can better control whether the vibration motor is
 on or off. Let's create a variable 'vibration_enabled' at the top of the file (next
@@ -91,7 +92,7 @@ void loop() {
 }
 ```
 
-# 1 Control from Python
+# 4 Control from Python
 
 The next step is to control this vibration from Python. The following example
 shows how to establish a serial connection and write (i.e. send) messages. In this
@@ -123,12 +124,12 @@ while True:
 ```
 
 
-# 1 Data-Driven Vibration
+# 5 Data-Driven Vibration
 
 The final step is to control the vibration based on data. In this example, we will
 nudge the wheelchair users when they reach their recommended number of wheel rotations.
 
-To do this, we can start from the last example of tutorial 2, which subscribes to
+To do this, we can start from the example '[GATT Notify](/docs/2019/04/30-com-gatt-notify.md)', which subscribes to
 orientation and rotation GATT services from the wheel and sends the data to the DCD Hub.
 We remove the subscription to orientation, which is not necessary in this case. We modify
 the handler of rotation data so that we check whether we need to nudge the wheelchair user or not.
