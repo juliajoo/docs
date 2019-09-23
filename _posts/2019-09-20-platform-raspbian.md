@@ -19,6 +19,8 @@ Start by creating a service script in your Pi's terminal
 (replace MY_EXAMPLE with an appropriate name):
 
 ``` bash
+sudo touch /etc/systemd/system/MY_EXAMPLE.service
+sudo chmod 644 /etc/systemd/system/MY_EXAMPLE.service
 sudo nano /etc/systemd/system/MY_EXAMPLE.service
 
 ```
@@ -45,13 +47,14 @@ WantedBy=multi-user.target
 ```
 
 Notes:
-After details if the service needs to wait for anything before
+* After details if the service needs to wait for anything before
 running, you can put other "events" in "After"
-Note you must always give the absolute path, 
+* Note you must always give the absolute path, 
 You can get this by running the "pwd"
 in your command line in the file's location, 
 and appending the "/FILE_NAME" to the response
-if anything goes wrong, your service always restarts
+if anything goes wrong,
+* The restart part ensures your service always restarts on any problem.
 
 Now you can attempt to start the service with the command:
 ```bash
