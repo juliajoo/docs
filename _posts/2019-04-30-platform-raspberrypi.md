@@ -183,7 +183,9 @@ sudo ./eduroam.sh
 And your network should be connected. 
 To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here](https://datacentricdesign.github.io/docs/2019/09/20/platform-raspbian). 
 
-The following service script logs on eduroam's network using the supplicant file at boot. It and then runs a python script that sends the Pi's IP address to the hub. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to send IP of your device to the hub, 
+The following service script logs on eduroam's network using the supplicant file at boot.
+**Note that** your pi's default username is "pi". Also note that you must change the path in the service files to your actual script locations.
+
 <details><summary markdown="span">eduroam.service</summary>
 
 	
@@ -216,7 +218,50 @@ Notes:
 
 </details>  
 
+After the first service, we will configure another service, ip.service, which will run a python script that sends the pi's IP address to the hub automatically on boot. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to your scripts folder in your pi, and create a dotenv file in that same directory, and put your wheelchair's THING_ID and THING_TOKEN in the .env file: 
 
+**Note that** you need to install the python Hub SDK dependencies in your pi for this script to work, you can review [step 4 of the python sdk tutorial](https://datacentricdesign.github.io/docs/sdk-python) (remember your pi is based on linux).
+
+```bash 
+  cd ~/Scripts
+  sudo nano .env 
+
+```
+
+
+<details><summary markdown="span">.env</summary>
+
+  <pre><code>
+  THING_ID = ...
+  THING_TOKEN = ...
+  </code></pre>
+
+</details>  
+
+
+You can see the ip.service file contents here: 
+<details><summary markdown="span">ip.service</summary>
+
+  <pre><code>
+  [Unit]
+  Description=Automatically send device IP to DCD hub using a python sdk
+  Wants=network-online.target
+  After=network-online.target
+
+  [Service]
+
+  ExecStart=/usr/bin/python3.7 /home/YOUR_PI_USERNAME/Scripts/ip.py
+  StandardOutput=syslog 
+  StandardError=syslog 
+  Restart=always
+  RestartSec=10
+  User=pi
+
+  [Install]
+  WantedBy=multi-user.target
+  </code></pre>
+
+</details>  
 
 
 
