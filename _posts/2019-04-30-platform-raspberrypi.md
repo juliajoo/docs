@@ -209,13 +209,6 @@ WantedBy=multi-user.target
 
 </code></pre>
 
-<p>
-Notes:
- # runs after network scaffolding is ready
- # establishes connection using eduroam.sh
- # always restart this process in case of breakdown
-</p>
-
 </details>  
 
 After the first service, we will configure another service, ip.service, which will run a python script that sends the pi's IP address to the hub automatically on boot. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to your scripts folder in your pi, and create a dotenv file in that same directory, and put your wheelchair's THING_ID and THING_TOKEN in the .env file: 
