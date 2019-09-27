@@ -26,7 +26,7 @@ To install this image on the SD card, download and install Etcher: [Etcher](http
 
 Starting Etcher, you first select your image file, then your SD card, and 'Flash'.
 
-# Step 2: Getting Started headless (without Monitor)
+## Step 2: Getting Started headless (without Monitor)
 
 ## 5.2.1 SSH
 
@@ -213,7 +213,8 @@ WantedBy=multi-user.target
 
 </details>  
 
-### Automatically Sharing IP Address with the DCDHub
+
+## Automatically Sharing IP Address with the DCDHub
 
 After the first service, we will configure another service, ip.service, which 
 will run a python script that sends the pi's IP address to the hub automatically 
