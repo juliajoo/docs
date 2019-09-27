@@ -14,7 +14,7 @@ import time
 
 # DCD Hub
 from dcd.entities.thing import Thing
-from dcd.entities.property_type import PropertyType
+from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
@@ -57,11 +57,11 @@ def handle_rotation_data(handle, value_bytes):
     find_or_create("Left Wheel Rotation",
                    PropertyType.TWO_DIMENSIONS).update_values(rotation_values)
 
+    global nudged
     if rotation_values[0] > RECOMMENDED_NUM_ROTATION and not nudged:
         ser.write('1')
         time.sleep(2)
         ser.write('0')
-        global nudged
         nudged = True
 
 def keyboard_interrupt_handler(signal_num):
