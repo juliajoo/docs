@@ -181,15 +181,17 @@ sudo ./eduroam.sh
 ```
 
 And your network should be connected. 
-To make this script run every time the pi boots up, We must must configure a *service*, that runs a certain command on a pi's startup. You can see how to create and configure service [here](https://datacentricdesign.github.io/docs/2019/09/20/platform-raspbian). 
+To make this script run every time the pi boots up, We must must configure a *service*, 
+that runs a certain command on a pi's startup. You can see how to create and configure 
+service [here](https://datacentricdesign.github.io/docs/2019/09/20/platform-raspbian). 
 
-The following service script logs on eduroam's network using the supplicant file at boot.
-**Note that** your pi's default username is "pi". Also note that you must change the path in the service files to your actual script locations.
+The following service script logs on eduroam's network using the supplicant file 
+at boot. **Note that** your pi's default username is "pi". Also note that you 
+must change the path in the service files to your actual script locations.
 
 <details><summary markdown="span">eduroam.service</summary>
 
 	
-
 <pre><code>
 [Unit]
 Description=Connect to eduroam automatically using older driver
@@ -211,9 +213,18 @@ WantedBy=multi-user.target
 
 </details>  
 
-After the first service, we will configure another service, ip.service, which will run a python script that sends the pi's IP address to the hub automatically on boot. Before you set up this service, make sure to download the [script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) to your scripts folder in your pi, and create a dotenv file in that same directory, and put your wheelchair's THING_ID and THING_TOKEN in the .env file: 
+### Automatically Sharing IP Address with the DCDHub
 
-**Note that** you need to install the python Hub SDK dependencies in your pi for this script to work, you can review [step 4 of the python sdk tutorial](https://datacentricdesign.github.io/docs/sdk-python) (remember your pi is based on linux).
+After the first service, we will configure another service, ip.service, which 
+will run a python script that sends the pi's IP address to the hub automatically 
+on boot. Before you set up this service, make sure to download the 
+[script](https://github.com/datacentricdesign/prototype/blob/master/rpi/ip.py) 
+to your scripts folder in your pi, and create a dotenv file in that same directory, 
+and put your wheelchair's THING_ID and THING_TOKEN in the .env file: 
+
+**Note that** you need to install the python Hub SDK dependencies in your pi for 
+this script to work, you can review [step 4 of the python sdk tutorial](https://datacentricdesign.github.io/docs/sdk-python) 
+(remember your pi is based on linux).
 
 ```bash 
   cd ~/Scripts
