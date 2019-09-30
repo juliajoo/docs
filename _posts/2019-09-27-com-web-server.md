@@ -154,7 +154,7 @@ Simplifying, the client runs three type of files.
 * js: the execution
 * css: the style
 
-In your web folder, create a 'static' and 'template'. In template, create a file
+In your web folder, create a 'static' and 'templates'. In templates, create a file
 'index.html' with the following:
 
 ![html base](/docs/assets/res/html_base.png)
