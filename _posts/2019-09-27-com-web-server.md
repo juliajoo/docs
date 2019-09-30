@@ -157,18 +157,7 @@ Simplifying, the client runs three type of files.
 In your web folder, create a 'static' and 'template'. In template, create a file
 'index.html' with the following:
 
-```html
-<html>
-    <head>
-        <title>Our App</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
-    
-    <body>
-        <h1>Welcome to our app!</h1>
-    </body>
-</html>
-```
+![html base](/docs/assets/res/html_base.png)
 
 The {{ }} signs represents template element to be replace. In this case, Flask will
 replace with the full path of the css file.
@@ -179,8 +168,8 @@ In the static folder, create a sub folder css with the file style.css:
 body {
     background-color: #DFDFDF;
 }
-.h1 {
-    font-family: Helvetica;
+h1 {
+    font-family: Helvetica,serif;
     font-weight: bold;
 }
 ```
@@ -226,10 +215,7 @@ Finally, paste the content in your project, in static/js/liquidFillGauge.js
 
 In gauge.html, replaced the mentioned tag by:
 
-```html
-<script src="{{ url_for('static', filename='js/liquidFillGauge.js') }}"
-                        language="JavaScript"></script>
-```
+![html_template](/docs/assets/res/html_template.png)
 
 # Web socket
 
