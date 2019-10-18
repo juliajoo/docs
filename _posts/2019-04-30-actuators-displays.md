@@ -69,7 +69,7 @@ First of all, you will need to install the following two libraries:
 * Adafruit_ST7735 (a library for the display).
 
 #### TFT Screen Graphics Test
-In this first example, let's run through all of the available graphics drawing functions of the Adafruit GFX library!
+In this [first example](/docs/examples/actuators/displays/tft_lcd_bitmaps/tft_lcd_bitmaps.ino), let's run through all of the available graphics drawing functions of the Adafruit GFX library!
 
 ##### Schematic
 
