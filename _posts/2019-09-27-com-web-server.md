@@ -244,6 +244,15 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 ```
 
+We add a socket handler JSON after our sensors' endpoints:
+
+```python
+@socketio.on('json')
+def handle_json(json):
+    print('received json: ' + str(json))
+    emit('json', json, broadcast=True)
+```
+
 At the bottom of the Python script, we replace the Flask app by the one from
 SocketIO.
 
