@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Exploring Data with Jupyter Notebook"
-date:   2019-05-08 01:30:13 +0000
+date:   2019-10-21 01:30:13 +0000
 categories: Tools
-tags: Jupyter
+tags: Jupyter Analysis
 ---
 
 In this post we introduce Jupyter Notebook as a way to explore data from the DCD Hub.
@@ -28,7 +28,7 @@ the Jupyter web interface. Otherwise, a link shows up in the terminal, you can
 copy/paste it in your web browser.
 
 Downloads this Jupyter example to start exploring the your data (right-click and 'Save link As...'):
-[jupyter-analysis.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/jupyter-analysis.ipynb)
+[jupyter-analysis.ipynb](https://github.com/datacentricdesign/docs/raw/master/examples/process/jupyter-dcdhub.ipynb)
 
 Back in Jupyter, click on File > Open
 

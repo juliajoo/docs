@@ -69,6 +69,8 @@ Let's do some examples with the types of LEDs (and buttons) we have.
 
 ### Simple LED with button switch.
 
+<a href="https://github.com/datacentricdesign/docs/blob/master/examples/actuators/leds/simple/simple.ino" target="_blank">Simple LED example</a>
+
 We'll be making a simple circuit to turn on the LED, with the help of the push button.
 
 We'll be using a simple LED, so lets use a 220Ω resistor (this will work just fine
@@ -92,6 +94,7 @@ this time!
 ![](/docs/assets/res/led_1.gif)
 
 ## 3 NeoPixel 5mm Diffused LED
+
 
 The NeoPixel Diffused LED is a special type of LED with 24bit color which gives
 256 intensities for R, G and B, allowing for a lot of colors. This requires the
@@ -142,7 +145,7 @@ taking care you're feeding them enough current and voltage.
 ![Schematic Diffused LEDs](/docs/assets/res/led_13.png)
 
 You can find the code for this example here:
-<a href="https://github.com/datacentricdesign/wheelchair-design-platform/blob/master/examples/actuators/leds/diffused_led/diffused_led.ino" target="_blank">Diffused LED example</a>
+<a href="https://github.com/datacentricdesign/docs/blob/master/examples/actuators/leds/diffused_led/diffused_led.ino" target="_blank">Diffused LED example</a>
 
 #### Result
 
