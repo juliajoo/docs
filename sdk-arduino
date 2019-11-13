@@ -1,6 +1,0 @@
----
-layout: page
-title: "Arduino SDK"
----
-
-The Arduino SDK facilitates WiFi-enabled Arduino to connect to the dcd hub and update the values of the thing's property.
