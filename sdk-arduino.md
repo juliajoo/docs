@@ -3,33 +3,33 @@ layout: page
 title: 'Arduino SDK'
 ---
 
-The Arduino SDK facilitates WiFi-enabled Arduino to connect to the dcd hub and update the values of the thing's property.
+The Arduino SDK facilitates WiFi-enabled Arduinos to connect to the dcd hub and update the values of the thing's property.
 
 # Getting Started
 
-Before we start, make sure you have followed the instruction to create DCD hub account from [Getting Started](https://datacentricdesign.org/docs/getting-started)
+Before we start, make sure you have followed the instruction to create DCD hub account from [Getting Started](https://datacentricdesign.org/docs/getting-started) page.
 
 If you have already install Arduino IDE, you can directly skip to step 2.
 
 ## Step 1: Download and Install Arduino IDE
 
-Select and download the latest version of the Arduino IDE from the link below. ( Arduino IDE is an open-source programming text editor, which allows you to write and upload the code to the Arduino board.)
+Select and download the latest version of the Arduino IDE from the link below. (Arduino IDE is an open-source programming text editor, which allows you to write and upload the code to the Arduino board.)
 
 Follow the step in the link : [https://www.arduino.cc/en/main/software](https://www.arduino.cc/en/main/software)
 
 ## Step 2: Install the DCD SDK and other dependent libraries
 
-Because our SDK relies on a few other libraries to work, we have to install those libraries before we go further installing the DCD SDK. The libraries we are going to installs are:
+Because the Arduino SDK relies on a few other libraries to work with, You need to install those libraries first. The libraries you need to installs are:
 
 1. WiFiNINA: enables WiFi enabled Arduino to connect to the internet.
 2. ArduinoMqttClient: This library allows you to connect to any MQTT server and send a message as the topic.
 3. DCD SDK for Arduino: The SDK to interact with DCD hub.
 
-To install these libraries into your Arduino IDE, `go to Arduino IDE -> Tools -> Manage Libraries.`
+To install these libraries into the Arduino IDE, go to `Arduino IDE -> Tools -> Manage Libraries.`
 
-On the library manager windows appear on the screen, search for WiFiNINA and install the latest version from there.
+On the library manager windows appear on the screen, search for WiFiNINA and install the latest version of the library from there.
 
-![Install WifiNina to Arduino Library Manager](/assets/res/arduino_wifiNiNA.png)
+![Install WiFiNINA to Arduino Library Manager](/assets/res/arduino_wifiNiNA.png)
 
 Follow the above same steps to install `ArduinoMqttClient` library and then our `DCD SDK for Arduino`.
 
@@ -108,4 +108,6 @@ The second parameter in the function is your sensor `value`, which you want to u
 
 ## Step 5: Upload the code on the Arduino and open the serial monitor to see the response.
 
-![Output on Arduino Serial](/assets/res/arduinoSDK_serial_output.gif)
+![Output on Arduino Serial](/assets/res/arduino_response.gif)
+
+You can check more examples with Accelerometer and FSR Sensor from the Example provided with Arduino DCD hub SDK.
